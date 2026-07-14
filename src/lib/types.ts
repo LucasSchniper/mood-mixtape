@@ -2,7 +2,7 @@ export type Song = {
   id: string;
   title: string;
   artist: string;
-  spotifyId: string;
+  spotifyId?: string;
   coverUrl?: string;
   moods: string[];
   genre: string;
