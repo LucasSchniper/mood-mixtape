@@ -83,7 +83,8 @@
       "party"
     ],
     "genre": "urbano",
-    "energy": 8
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e9/16/69/e91669b1-53be-1516-a632-6ce93891c101/886448636915.jpg/600x600bb.jpg"
   },
   {
     "id": "como-si-no-importara-emilia-duki",
@@ -166,7 +167,8 @@
       "melancholic"
     ],
     "genre": "trap",
-    "energy": 6
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/5a/fb/9d/5afb9d94-fc4a-b9e8-f465-c3dcc869a840/193483868332.jpg/600x600bb.jpg"
   },
   {
     "id": "wapo-traketero-nicki-nicole",
@@ -529,7 +531,8 @@
       "romantic"
     ],
     "genre": "indie",
-    "energy": 6
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4f/58/41/4f5841f1-e47f-db76-d61e-88aa3e628905/00602438981267_Cover.jpg/600x600bb.jpg"
   },
   {
     "id": "el-enemigo-conociendo-rusia",
@@ -654,7 +657,8 @@
       "nostalgic"
     ],
     "genre": "rock",
-    "energy": 4
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f5/93/8c/f5938c49-964c-31d1-4b33-78b634f71fb7/190295978075.jpg/600x600bb.jpg"
   },
   {
     "id": "get-lucky-daft-punk",
@@ -667,7 +671,8 @@
       "upbeat"
     ],
     "genre": "electronic",
-    "energy": 8
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e8/43/5f/e8435ffa-b6b9-b171-40ab-4ff3959ab661/886443919266.jpg/600x600bb.jpg"
   },
   {
     "id": "bad-guy-billie-eilish",
@@ -694,7 +699,8 @@
       "heartbreak"
     ],
     "genre": "alternative rock",
-    "energy": 4
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/28/7a/7c/287a7ca9-ed95-1a21-e3bb-4559a1a0ac0e/191404134351.png/600x600bb.jpg"
   },
   {
     "id": "levitating-dua-lipa",
@@ -707,7 +713,8 @@
       "summer"
     ],
     "genre": "pop",
-    "energy": 8
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6c/11/d6/6c11d681-aa3a-d59e-4c2e-f77e181026ab/190295092665.jpg/600x600bb.jpg"
   },
   {
     "id": "do-i-wanna-know-arctic-monkeys",
@@ -720,7 +727,8 @@
       "moody"
     ],
     "genre": "indie rock",
-    "energy": 6
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/9c/b5/699cb5d6-115c-ff73-9d26-e57ea4350d72/887828031795.png/600x600bb.jpg"
   },
   {
     "id": "dreams-fleetwood-mac",
@@ -733,7 +741,8 @@
       "rainy day"
     ],
     "genre": "rock",
-    "energy": 5
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/600x600bb.jpg"
   },
   {
     "id": "humble-kendrick-lamar",
@@ -746,7 +755,8 @@
       "energetic"
     ],
     "genre": "hip-hop",
-    "energy": 8
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ab/16/ef/ab16efe9-e7f1-66ec-021c-5592a23f0f9e/17UMGIM88793.rgb.jpg/600x600bb.jpg"
   },
   {
     "id": "mr-brightside-the-killers",
@@ -773,7 +783,8 @@
       "chill"
     ],
     "genre": "r&b",
-    "energy": 4
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/600x600bb.jpg"
   },
   {
     "id": "believer-imagine-dragons",
@@ -786,7 +797,8 @@
       "angsty"
     ],
     "genre": "rock",
-    "energy": 8
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/7a/b8/117ab805-6811-8929-18b9-0fad7baf0c25/17UMGIM98210.rgb.jpg/600x600bb.jpg"
   },
   {
     "id": "back-to-black-amy-winehouse",
@@ -813,6 +825,7 @@
       "energetic"
     ],
     "genre": "psychedelic pop",
-    "energy": 6
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/600x600bb.jpg"
   }
 ]
