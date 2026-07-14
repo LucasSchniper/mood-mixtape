@@ -123,12 +123,13 @@ function extractSignals(moodText: string) {
   return { tokenSet, matchedTags, desiredEnergy };
 }
 
-function hashString(str: string) {
-  let h = 0;
-  for (let i = 0; i < str.length; i++) {
-    h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+function shuffle<T>(items: T[]) {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
   }
-  return h;
+  return result;
 }
 
 export async function POST(req: NextRequest) {
@@ -178,10 +179,7 @@ export async function POST(req: NextRequest) {
       score += Math.max(0, 2 - Math.abs(song.energy - desiredEnergy) * 0.3);
     }
 
-    // Pequeña variación determinística para que el orden no sea siempre idéntico ante empates.
-    const tiebreak = (Math.abs(hashString(mood + song.id)) % 100) / 1000;
-
-    return { song, score: score + tiebreak, matchedOn };
+    return { song, score, matchedOn };
   });
 
   const hasAnyMatch = scored.some((s) => s.score >= 1);
@@ -194,9 +192,15 @@ export async function POST(req: NextRequest) {
     ranked = ranked.filter((_, i) => i % step === 0);
   }
 
+  // Mezclamos entre los mejores matches para que generar de nuevo con el mismo
+  // mood no siempre tire la misma playlist, sin perder relevancia.
+  const POOL_SIZE = 24;
+  const primaryPool = shuffle(ranked.slice(0, Math.min(POOL_SIZE, ranked.length)));
+  const backfillPool = shuffle(ranked);
+
   const picks: { id: string; reason: string; song: Song }[] = [];
   const usedArtists = new Map<string, number>();
-  for (const entry of ranked) {
+  for (const entry of primaryPool) {
     if (picks.length >= 8) break;
     const artistCount = usedArtists.get(entry.song.artist) ?? 0;
     if (artistCount >= 2) continue;
@@ -212,7 +216,7 @@ export async function POST(req: NextRequest) {
   }
 
   if (picks.length < 6) {
-    for (const entry of ranked) {
+    for (const entry of backfillPool) {
       if (picks.length >= 6) break;
       if (picks.some((p) => p.id === entry.song.id)) continue;
       picks.push({

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -44,18 +44,38 @@ function AlbumCover({ song }: { song: Song }) {
   );
 }
 
-const EXAMPLES = [
+const ALL_EXAMPLES = [
   "lluvia, domingo a la tarde, nostalgia",
   "arrancando el gimnasio, quiero energía",
   "manejando de noche por la ruta, solo",
   "recién cortamos, necesito llorar un rato",
+  "previa con amigos, mucha fiesta",
+  "estudiando para el final, necesito concentrarme",
+  "viaje en auto por la ruta, verano",
+  "domingo tranquilo, quiero relajarme",
+  "estoy re enamorado, quiero algo romántico",
+  "tengo bronca, necesito descargar",
+  "asado con la familia, rock nacional",
+  "tarde de invierno, café y lectura",
 ];
+
+const DEFAULT_EXAMPLES = ALL_EXAMPLES.slice(0, 4);
+
+function pickRandomExamples(count: number) {
+  const shuffled = [...ALL_EXAMPLES].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
 
 export function MoodMixtape() {
   const [mood, setMood] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<Result | null>(null);
+  const [examples, setExamples] = useState(DEFAULT_EXAMPLES);
+
+  useEffect(() => {
+    setExamples(pickRandomExamples(4));
+  }, []);
 
   async function generate(promptOverride?: string) {
     const finalMood = (promptOverride ?? mood).trim();
@@ -102,7 +122,7 @@ export function MoodMixtape() {
           }}
         />
         <div className="flex flex-wrap gap-2">
-          {EXAMPLES.map((ex) => (
+          {examples.map((ex) => (
             <button
               key={ex}
               type="button"
