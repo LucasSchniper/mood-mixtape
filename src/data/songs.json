@@ -1,0 +1,818 @@
+[
+  {
+    "id": "blinding-lights-the-weeknd",
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "spotifyId": "0VjIjW4GlUZAMYd2vXMi3b",
+    "moods": [
+      "energetic",
+      "night drive",
+      "upbeat"
+    ],
+    "genre": "synth-pop",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a6/6e/bf/a66ebf79-5008-8948-b352-a790fc87446b/19UM1IM04638.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "quevedo-bzrp-music-sessions-vol-52",
+    "title": "Quevedo: Bzrp Music Sessions, Vol. 52",
+    "artist": "Bizarrap, Quevedo",
+    "spotifyId": "0plJfZ90QyjkjaXmjguaW9",
+    "moods": [
+      "party",
+      "night drive",
+      "energetic",
+      "summer"
+    ],
+    "genre": "trap",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a0/b5/76/a0b576ad-667d-1140-4694-23e5d598e89e/196925240499.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "duki-bzrp-music-sessions-vol-50",
+    "title": "Duki: Bzrp Music Sessions, Vol. 50",
+    "artist": "Bizarrap, Duki",
+    "spotifyId": "7MkylDYvKTSuWgrsBhHlsG",
+    "moods": [
+      "energetic",
+      "confident",
+      "party",
+      "gym"
+    ],
+    "genre": "trap",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/42/15/4b/42154b41-bb6e-d25a-108b-7d0288158418/197187368204.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "nicki-nicole-bzrp-music-sessions-vol-13",
+    "title": "Nicki Nicole: Bzrp Music Sessions, Vol. 13",
+    "artist": "Bizarrap, Nicki Nicole",
+    "spotifyId": "0ONx6ugqHheZg4gmD9FpqR",
+    "moods": [
+      "heartbreak",
+      "confident",
+      "night drive"
+    ],
+    "genre": "trap",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a3/24/a1/a324a12b-f8fd-1a34-9c2f-917c9ee5d7b1/194491213176.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "mamichula-trueno-nicki-nicole",
+    "title": "Mamichula",
+    "artist": "Trueno, Nicki Nicole",
+    "spotifyId": "4pXW6ZAHBz7ODXTRKklWrM",
+    "moods": [
+      "party",
+      "flirty",
+      "energetic",
+      "summer"
+    ],
+    "genre": "trap",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/fc/85/86/fc8586c8-bc00-130f-6f75-818797148ce2/195497279401.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "business-woman-nathy-peluso",
+    "title": "Business Woman",
+    "artist": "Nathy Peluso",
+    "spotifyId": "78wyf1JZmuzIoX0cqtTvCd",
+    "moods": [
+      "confident",
+      "empowering",
+      "party"
+    ],
+    "genre": "urbano",
+    "energy": 8
+  },
+  {
+    "id": "como-si-no-importara-emilia-duki",
+    "title": "Como Si No Importara",
+    "artist": "Emilia, Duki",
+    "spotifyId": "7M0mBls29IohQIPGqegcyE",
+    "moods": [
+      "party",
+      "romantic",
+      "energetic"
+    ],
+    "genre": "pop urbano",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/06/4b/b6/064bb67b-3530-f61d-c476-e371b48c4a8e/196589590152.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "mienteme-tini-maria-becerra",
+    "title": "Miénteme",
+    "artist": "TINI, Maria Becerra",
+    "spotifyId": "0cOa970mzTWAxKtltpkpLc",
+    "moods": [
+      "heartbreak",
+      "empowering",
+      "party"
+    ],
+    "genre": "pop urbano",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/52/8c/b4/528cb4e3-56a2-b926-a5a3-4a11a83d0ad0/886449235001.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "mai-milo-j",
+    "title": "M.A.I",
+    "artist": "Milo J",
+    "spotifyId": "35ttE4t8lQZA2vuCYDg4G7",
+    "moods": [
+      "chill",
+      "romantic",
+      "melancholic"
+    ],
+    "genre": "r&b urbano",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9b/e7/d3/9be7d3f5-b52b-bb88-331b-be62acf321d9/197190794755.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "adan-y-eva-paulo-londra",
+    "title": "Adán y Eva",
+    "artist": "Paulo Londra",
+    "spotifyId": "132ALUzVLmqYB4UsBj5qD6",
+    "moods": [
+      "romantic",
+      "upbeat",
+      "summer"
+    ],
+    "genre": "trap",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ca/ba/80/caba8095-1d0a-c5f1-04d7-6053de7baa9e/190296890352.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "canguro-wos",
+    "title": "Canguro",
+    "artist": "WOS",
+    "spotifyId": "4TkNVyaXjEk0Hhl1n0shns",
+    "moods": [
+      "energetic",
+      "angsty",
+      "gym"
+    ],
+    "genre": "trap",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1e/3b/11/1e3b11ec-9a92-2aff-c104-9750f6f43015/199066289716.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "nada-cazzu",
+    "title": "Nada",
+    "artist": "Cazzu, Lyanno, Rauw Alejandro",
+    "spotifyId": "7DOh0tBGnyMt6C5OO7o8Yq",
+    "moods": [
+      "heartbreak",
+      "night drive",
+      "melancholic"
+    ],
+    "genre": "trap",
+    "energy": 6
+  },
+  {
+    "id": "wapo-traketero-nicki-nicole",
+    "title": "Wapo Traketero",
+    "artist": "Nicki Nicole",
+    "spotifyId": "4cBX8xN4joiBKOMaBwZQQX",
+    "moods": [
+      "confident",
+      "party",
+      "summer"
+    ],
+    "genre": "trap",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/11/12/38/111238a7-a37a-bd50-d599-a1f294b5da7f/194491635534.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "automatico-maria-becerra",
+    "title": "Automático",
+    "artist": "Maria Becerra",
+    "spotifyId": "0poQY3RMThmIiutOGv3yH3",
+    "moods": [
+      "party",
+      "energetic",
+      "summer"
+    ],
+    "genre": "pop urbano",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/8f/28/13/8f281348-74f4-be51-2552-46199d343a20/075679703705.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "l-gante-bzrp-music-sessions-vol-38",
+    "title": "L-Gante: Bzrp Music Sessions, Vol. 38",
+    "artist": "Bizarrap, L-Gante",
+    "spotifyId": "1Crj1zkRMpsEjb9NOR6Zof",
+    "moods": [
+      "party",
+      "summer",
+      "energetic"
+    ],
+    "genre": "rkt",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/f9/69/d1f96944-7177-481f-8da9-12283cee8db1/196006235529.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "loca-khea-duki-cazzu",
+    "title": "Loca",
+    "artist": "KHEA, Duki, Cazzu",
+    "spotifyId": "0vnrhysrKKRdNYFKLAGzRc",
+    "moods": [
+      "party",
+      "flirty",
+      "night drive"
+    ],
+    "genre": "trap",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/c1/b5/bc/c1b5bc20-555f-7bc1-7a72-f604390fb332/MUEVA054.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "she-dont-give-a-fo-duki-khea",
+    "title": "She Don't Give a Fo",
+    "artist": "Duki, KHEA",
+    "spotifyId": "03a359wbiUsjN9h6yzXvmS",
+    "moods": [
+      "party",
+      "confident",
+      "energetic"
+    ],
+    "genre": "trap",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/70/92/96/70929633-cec2-561d-afa8-a19428055626/193483792392.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "de-musica-ligera-soda-stereo",
+    "title": "De Música Ligera",
+    "artist": "Soda Stereo",
+    "spotifyId": "2lpIh6Gr6HYjg1CFBaucS5",
+    "moods": [
+      "nostalgic",
+      "road trip",
+      "upbeat"
+    ],
+    "genre": "rock nacional",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/60/18/68/601868f7-68ba-9416-af42-b26b2f68035f/mzi.qyqtvoxs.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "persiana-americana-soda-stereo",
+    "title": "Persiana Americana",
+    "artist": "Soda Stereo",
+    "spotifyId": "4iPA2yB8bK7T770EkkOi7s",
+    "moods": [
+      "nostalgic",
+      "energetic",
+      "road trip"
+    ],
+    "genre": "rock nacional",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/05/e3/65/05e365e6-c318-e16d-0a27-1d896ba231f2/mzi.hvktyhmz.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "los-dinosaurios-charly-garcia",
+    "title": "Los Dinosaurios",
+    "artist": "Charly García",
+    "spotifyId": "57GfKwny69x61eU3oKwcbP",
+    "moods": [
+      "melancholic",
+      "nostalgic",
+      "rainy day"
+    ],
+    "genre": "rock nacional",
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/59/09/cc/5909ccf4-019b-7e30-cae6-a0711a2e10b9/00602498487730.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "un-vestido-y-un-amor-fito-paez",
+    "title": "Un Vestido y un Amor",
+    "artist": "Fito Páez",
+    "spotifyId": "2fuN5UVkZFtak2aOpXJSln",
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "chill"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features/e0/d2/85/dj.sjstqyuc.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "el-arriero-divididos",
+    "title": "El Arriero",
+    "artist": "Divididos",
+    "spotifyId": "7CmPYxYw0BZXL6xZeFkHQU",
+    "moods": [
+      "energetic",
+      "road trip",
+      "nostalgic"
+    ],
+    "genre": "rock nacional",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/32/e1/f1/32e1f132-c679-fee6-0839-5c6c948e667c/00602498229484.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "rasguna-las-piedras-sui-generis",
+    "title": "Rasguña las Piedras",
+    "artist": "Sui Generis",
+    "spotifyId": "3lvAzKmRH8vzXQ4xm19v78",
+    "moods": [
+      "nostalgic",
+      "melancholic",
+      "rainy day"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/e4/5c/75/mzi.wpsyknon.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "verano-del-92-los-piojos",
+    "title": "Verano del 92",
+    "artist": "Los Piojos",
+    "spotifyId": "4NVKKVu4lMvxelWoH6G0JB",
+    "moods": [
+      "nostalgic",
+      "summer",
+      "road trip"
+    ],
+    "genre": "rock nacional",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/6b/68/58/6b6858dd-fc95-de3a-5451-91bcc9e868f9/656291132120.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "balada-del-diablo-y-la-muerte-la-renga",
+    "title": "Balada del Diablo y la Muerte",
+    "artist": "La Renga",
+    "spotifyId": "4ObkiTmpsSU31gqGhTb8SH",
+    "moods": [
+      "angsty",
+      "energetic",
+      "night drive"
+    ],
+    "genre": "rock nacional",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5c/b7/ee/5cb7ee10-d80f-5225-1160-d15157b25d8d/23UMGIM34835.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "sr-cobranza-bersuit-vergarabat",
+    "title": "Sr. Cobranza",
+    "artist": "Bersuit Vergarabat",
+    "spotifyId": "0zXMZx9kvFO6x58JiIh4BJ",
+    "moods": [
+      "angsty",
+      "energetic",
+      "party"
+    ],
+    "genre": "rock nacional",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b3/3d/25/b33d2580-7d73-8b34-78c6-fdd81f56d402/1220.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "hacelo-por-mi-attaque-77",
+    "title": "Hacelo por Mí",
+    "artist": "Attaque 77",
+    "spotifyId": "5zqXco5gN08t20hf5AO62z",
+    "moods": [
+      "angsty",
+      "energetic",
+      "punk"
+    ],
+    "genre": "punk rock",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2f/b7/3e/2fb73e50-8037-6946-9738-8a4cb27d555c/7796876508032.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "presente-vox-dei",
+    "title": "Presente",
+    "artist": "Vox Dei",
+    "spotifyId": "1eowBr8aeYtUN5GGgL4hei",
+    "moods": [
+      "nostalgic",
+      "chill",
+      "classic rock"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/78/d4/07/78d40726-0334-7e83-7ab6-19fd96ceac42/617629106367_cover.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "cementerio-club-pescado-rabioso",
+    "title": "Cementerio Club",
+    "artist": "Pescado Rabioso",
+    "spotifyId": "1WKVXszFyrS2CjKtMafT7P",
+    "moods": [
+      "nostalgic",
+      "melancholic",
+      "psychedelic"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7e/c9/8f/7ec98fd0-3710-6ca4-e179-3e2817855bd9/mzi.wqfuqhhn.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "seminare-seru-giran",
+    "title": "Seminare",
+    "artist": "Serú Girán",
+    "spotifyId": "5bXhx2vO2N4ZwUi0QFn4HU",
+    "moods": [
+      "nostalgic",
+      "upbeat",
+      "classic rock"
+    ],
+    "genre": "rock nacional",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/51/9f/06/519f06d1-1688-dac5-19a9-a4b62b60c7ad/5099750912027.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "flaca-andres-calamaro",
+    "title": "Flaca",
+    "artist": "Andrés Calamaro",
+    "spotifyId": "1p7m9H4H8s0Y7SgRm7j3ED",
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "chill"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/cd/52/6d/cd526dc6-daaa-e990-7019-47c828efdd1b/mzi.xpwcramk.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "irresponsables-babasonicos",
+    "title": "Irresponsables",
+    "artist": "Babasónicos",
+    "spotifyId": "0dsViRiDTIuexAL42Nc1Kh",
+    "moods": [
+      "chill",
+      "night drive",
+      "confident"
+    ],
+    "genre": "rock alternativo",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/15/ad/ad/15adad7d-6786-dc25-7a18-c79169b3f842/dj.vcmgfipy.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "mariposa-pontiac-redonditos-de-ricota",
+    "title": "Mariposa Pontiac",
+    "artist": "Patricio Rey y sus Redonditos de Ricota",
+    "spotifyId": "5MzmknrgymQwJEqp1vgzRX",
+    "moods": [
+      "nostalgic",
+      "melancholic",
+      "night drive"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/06/fa/f3/06faf3af-cb4a-5efe-2d2b-f4876d52386b/b51bc03a-b9da-4f37-b111-54930f1ffb78.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "lamento-boliviano-enanitos-verdes",
+    "title": "Lamento Boliviano",
+    "artist": "Los Enanitos Verdes",
+    "spotifyId": "0BjhXj9dDIVeudq1wqwkwX",
+    "moods": [
+      "nostalgic",
+      "road trip",
+      "upbeat"
+    ],
+    "genre": "rock nacional",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e5/64/3c/e5643c58-0281-6735-74af-a53b8dfda4ec/00724382987055.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "cosas-imposibles-gustavo-cerati",
+    "title": "Cosas Imposibles",
+    "artist": "Gustavo Cerati",
+    "spotifyId": "32XctHM10ygsExasAGxyod",
+    "moods": [
+      "romantic",
+      "chill",
+      "nostalgic"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3a/7a/04/3a7a04c2-8bec-3e0b-89e1-3da93f4afa44/mzi.lfxlmais.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "prisionero-miranda",
+    "title": "Prisionero",
+    "artist": "Miranda!",
+    "spotifyId": "4qXdhvf2VrfYZqAaPTnn3m",
+    "moods": [
+      "party",
+      "romantic",
+      "upbeat"
+    ],
+    "genre": "synth-pop",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/21/97/ee/2197ee66-fdae-2ab6-ca7e-51d8a99d5437/mzm.mfebmetj.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "textos-usted-senalemelo",
+    "title": "Textos",
+    "artist": "Usted Señálemelo",
+    "spotifyId": "03y9nOt5sbZDjY5tDwW5l7",
+    "moods": [
+      "chill",
+      "indie",
+      "melancholic"
+    ],
+    "genre": "indie",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0a/68/d0/0a68d057-7fbb-417a-a555-9e0761855277/198846772813.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "no-no-no-bandalos-chinos",
+    "title": "No, No, No",
+    "artist": "Bandalos Chinos",
+    "spotifyId": "0BdfwxNukwhW3bH6Ii01Dy",
+    "moods": [
+      "chill",
+      "summer",
+      "romantic"
+    ],
+    "genre": "indie",
+    "energy": 6
+  },
+  {
+    "id": "el-enemigo-conociendo-rusia",
+    "title": "El Enemigo",
+    "artist": "Conociendo Rusia",
+    "spotifyId": "2CXmFJC9W19iQdpAFcEojv",
+    "moods": [
+      "melancholic",
+      "night drive",
+      "indie"
+    ],
+    "genre": "indie",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/bf/9e/f2/bf9ef221-f7f0-b962-6b9c-0a615672cf75/196006808976.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "no-hagas-que-me-arrepienta-winona-riders",
+    "title": "No Hagas Que Me Arrepienta",
+    "artist": "Winona Riders",
+    "spotifyId": "5CB6519Z2smzYDLWmKCMDg",
+    "moods": [
+      "angsty",
+      "energetic",
+      "indie"
+    ],
+    "genre": "indie rock",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/38/68/2d3868ce-d441-3ec2-2302-49d236b784a6/198846802381.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "dia-de-los-muertos-el-mato",
+    "title": "Día de los Muertos",
+    "artist": "El Mató a un Policía Motorizado",
+    "spotifyId": "4kZZ3wHxi0cyiuoczQb5am",
+    "moods": [
+      "energetic",
+      "indie",
+      "road trip"
+    ],
+    "genre": "indie rock",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/47/fa/b3/47fab32b-eba5-d92d-7f45-ab7a9443f64c/0.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "pelicula-perras-on-the-beach",
+    "title": "Película",
+    "artist": "Perras on the Beach",
+    "spotifyId": "2jYCnfeTdOat7PMTiWpWSx",
+    "moods": [
+      "chill",
+      "indie",
+      "melancholic"
+    ],
+    "genre": "indie",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/95/91/a6/9591a63e-682f-4798-1c31-1e374bf7005b/197187311811.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "quisiera-marilina-bertoldi",
+    "title": "Quisiera",
+    "artist": "Marilina Bertoldi",
+    "spotifyId": "4IAbY4sMJI8wxz7fO3hHlI",
+    "moods": [
+      "angsty",
+      "confident",
+      "indie"
+    ],
+    "genre": "indie rock",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/90/b2/bd/90b2bdac-f933-98b3-8fc9-d8fc3a1391f7/190374611633.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "como-antes-salvapantallas",
+    "title": "Como Antes",
+    "artist": "Salvapantallas",
+    "spotifyId": "7sJFJlCdeWedanc9oIeCgZ",
+    "moods": [
+      "nostalgic",
+      "chill",
+      "romantic"
+    ],
+    "genre": "indie",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/16/8e/fa/168efaaf-9b17-6a33-4345-04b500d26e61/193483788241.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "bohemian-rhapsody-queen",
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "spotifyId": "1yslmgUcM2AOkOPS4sl3QV",
+    "moods": [
+      "epic",
+      "nostalgic",
+      "focus/study"
+    ],
+    "genre": "rock",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4d/08/2a/4d082a9e-7898-1aa1-a02f-339810058d9e/14DMGIM05632.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "someone-like-you-adele",
+    "title": "Someone Like You",
+    "artist": "Adele",
+    "spotifyId": "1zwMYTA5nlNjZxYrvBB2pV",
+    "moods": [
+      "heartbreak",
+      "melancholic",
+      "rainy day"
+    ],
+    "genre": "pop",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/eb/ca/25/ebca2596-cd1e-b295-91a3-771c868d0a79/191404113868.png/600x600bb.jpg"
+  },
+  {
+    "id": "yellow-coldplay",
+    "title": "Yellow",
+    "artist": "Coldplay",
+    "spotifyId": "3AJwUDP919kvQ9QcozQPxg",
+    "moods": [
+      "romantic",
+      "chill",
+      "nostalgic"
+    ],
+    "genre": "rock",
+    "energy": 4
+  },
+  {
+    "id": "get-lucky-daft-punk",
+    "title": "Get Lucky",
+    "artist": "Daft Punk, Pharrell Williams, Nile Rodgers",
+    "spotifyId": "69kOkLUCkxIZYexIgSG8rq",
+    "moods": [
+      "party",
+      "summer",
+      "upbeat"
+    ],
+    "genre": "electronic",
+    "energy": 8
+  },
+  {
+    "id": "bad-guy-billie-eilish",
+    "title": "bad guy",
+    "artist": "Billie Eilish",
+    "spotifyId": "2Cp3p7XpvsdCqYuQbmvaIT",
+    "moods": [
+      "confident",
+      "party",
+      "energetic"
+    ],
+    "genre": "pop",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "creep-radiohead",
+    "title": "Creep",
+    "artist": "Radiohead",
+    "spotifyId": "70LcF31zb1H0PyJoS1Sx1r",
+    "moods": [
+      "melancholic",
+      "angsty",
+      "heartbreak"
+    ],
+    "genre": "alternative rock",
+    "energy": 4
+  },
+  {
+    "id": "levitating-dua-lipa",
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "spotifyId": "39LLxExYz6ewLAcYrzQQyP",
+    "moods": [
+      "party",
+      "energetic",
+      "summer"
+    ],
+    "genre": "pop",
+    "energy": 8
+  },
+  {
+    "id": "do-i-wanna-know-arctic-monkeys",
+    "title": "Do I Wanna Know?",
+    "artist": "Arctic Monkeys",
+    "spotifyId": "5FVd6KXrgO9B3JPmC8OPst",
+    "moods": [
+      "night drive",
+      "romantic",
+      "moody"
+    ],
+    "genre": "indie rock",
+    "energy": 6
+  },
+  {
+    "id": "dreams-fleetwood-mac",
+    "title": "Dreams",
+    "artist": "Fleetwood Mac",
+    "spotifyId": "0ofHAoxe9vBkTCp2UQIavz",
+    "moods": [
+      "chill",
+      "nostalgic",
+      "rainy day"
+    ],
+    "genre": "rock",
+    "energy": 5
+  },
+  {
+    "id": "humble-kendrick-lamar",
+    "title": "HUMBLE.",
+    "artist": "Kendrick Lamar",
+    "spotifyId": "7KXjTSCq5nL1LoYtL7XAwS",
+    "moods": [
+      "confident",
+      "gym",
+      "energetic"
+    ],
+    "genre": "hip-hop",
+    "energy": 8
+  },
+  {
+    "id": "mr-brightside-the-killers",
+    "title": "Mr. Brightside",
+    "artist": "The Killers",
+    "spotifyId": "003vvx7Niy0yvhvHt4a68B",
+    "moods": [
+      "party",
+      "angsty",
+      "energetic"
+    ],
+    "genre": "rock",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/64/9c/11649c80-2066-dba8-77a9-df7eecae26c1/17UM1IM06937.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "ivy-frank-ocean",
+    "title": "Ivy",
+    "artist": "Frank Ocean",
+    "spotifyId": "2ZWlPOoWh0626oTaHrnl2a",
+    "moods": [
+      "nostalgic",
+      "melancholic",
+      "chill"
+    ],
+    "genre": "r&b",
+    "energy": 4
+  },
+  {
+    "id": "believer-imagine-dragons",
+    "title": "Believer",
+    "artist": "Imagine Dragons",
+    "spotifyId": "0pqnGHJpmpxLKifKRmU6WP",
+    "moods": [
+      "gym",
+      "energetic",
+      "angsty"
+    ],
+    "genre": "rock",
+    "energy": 8
+  },
+  {
+    "id": "back-to-black-amy-winehouse",
+    "title": "Back to Black",
+    "artist": "Amy Winehouse",
+    "spotifyId": "30FURVTCpbKyykjSEQzGkH",
+    "moods": [
+      "heartbreak",
+      "melancholic",
+      "night drive"
+    ],
+    "genre": "soul",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/cf/3f/09/cf3f0994-980d-d8ed-088d-ae89af256b73/15UMGIM24224.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "the-less-i-know-the-better-tame-impala",
+    "title": "The Less I Know the Better",
+    "artist": "Tame Impala",
+    "spotifyId": "6K4t31amVTZDgR3sKmwUJJ",
+    "moods": [
+      "night drive",
+      "chill",
+      "energetic"
+    ],
+    "genre": "psychedelic pop",
+    "energy": 6
+  }
+]
