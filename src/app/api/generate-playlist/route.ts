@@ -144,16 +144,47 @@ function splitArtists(artistField: string) {
     .filter(Boolean);
 }
 
-// Busca artistas del catálogo mencionados por nombre en el mood ("playlist de Bruno Mars").
+// Palabras de los géneros del catálogo (ej. "punk" de "punk rock"): las excluimos como
+// candidatas a nombre distintivo de artista para que "Daft Punk" no se cuele cada vez
+// que alguien pide el género "punk rock".
+function buildGenreVocab(catalog: Song[]) {
+  const vocab = new Set<string>();
+  for (const song of catalog) {
+    normalize(song.genre)
+      .split(/[^a-z0-9]+/)
+      .forEach((w) => w && vocab.add(w));
+  }
+  return vocab;
+}
+
+// Busca artistas del catálogo mencionados en el mood, ya sea por nombre completo
+// ("playlist de Bruno Mars") o solo por la parte más distintiva del nombre ("playlist
+// de Calamaro" -> Andrés Calamaro), que es como la mayoría de la gente nombra artistas
+// en español. Devuelve un mapa normalizado -> nombre tal cual aparece en el catálogo.
 function findRequestedArtists(moodText: string, catalog: Song[]) {
   const normalizedMood = normalize(moodText);
-  const atomicArtists = new Set<string>();
+  const genreVocab = buildGenreVocab(catalog);
+  const atomicArtists = new Map<string, string>();
   for (const song of catalog) {
-    splitArtists(song.artist).forEach((a) => atomicArtists.add(a));
+    splitArtists(song.artist).forEach((a) => {
+      const key = normalize(a);
+      if (!atomicArtists.has(key)) atomicArtists.set(key, a);
+    });
   }
-  const matched = new Set<string>();
-  for (const artist of atomicArtists) {
-    if (containsWord(normalizedMood, normalize(artist))) matched.add(artist);
+
+  const matched = new Map<string, string>();
+  for (const [key, display] of atomicArtists) {
+    if (containsWord(normalizedMood, key)) {
+      matched.set(key, display);
+      continue;
+    }
+    // El nombre completo no aparece tal cual: probamos con las palabras más distintivas
+    // del nombre (largo >= 4, sin contar vocabulario de género) para reconocer menciones
+    // parciales típicas en español ("Calamaro", "Charly", "Cerati").
+    const words = key.split(/\s+/).filter((w) => w.length >= 4 && !genreVocab.has(w));
+    if (words.some((w) => containsWord(normalizedMood, w))) {
+      matched.set(key, display);
+    }
   }
   return matched;
 }
@@ -250,16 +281,22 @@ async function fetchItunesTracks(term: string): Promise<ItunesTrack[]> {
 // Complementa el catálogo curado con resultados en vivo de la iTunes Search API
 // (misma fuente ya usada para portadas/previews, gratis y sin API key) para cubrir
 // artistas o géneros que no están en nuestra selección local de 175 canciones.
-// Buscamos en paralelo por el género detectado (si hay) y por el texto libre, así
-// no perdemos ni los pedidos de género ("un concierto de rock") ni los de artista
-// ("playlist de Rosalía").
-async function searchItunesCandidates(query: string, catalog: Song[]): Promise<Song[]> {
+// Buscamos en paralelo por el género detectado (si hay), por el texto libre y por
+// cada artista pedido explícitamente (así, si el catálogo local solo tiene 2 temas
+// de un artista, completamos con más resultados reales de ese artista en vez de
+// rellenar la playlist con canciones de otros).
+async function searchItunesCandidates(
+  query: string,
+  catalog: Song[],
+  requestedArtists: string[]
+): Promise<Song[]> {
   if (!query.trim()) return [];
 
   const terms = new Set<string>();
   const genreTerm = extractGenreSearchTerm(query, catalog);
   if (genreTerm) terms.add(genreTerm);
   terms.add(buildFreeTextSearchTerm(query));
+  requestedArtists.forEach((a) => terms.add(a));
 
   const resultLists = await Promise.all(Array.from(terms).map(fetchItunesTracks));
 
@@ -318,12 +355,24 @@ export async function POST(req: NextRequest) {
 
   const catalog = songs as Song[];
 
+  // Solo buscamos artistas pedidos en el catálogo curado. Si mirásemos también los
+  // resultados de iTunes caeríamos en un falso positivo autorreferencial: como esos
+  // resultados vienen de buscar el propio texto del mood, siempre aparece algún track
+  // o artista que se llama igual al término buscado (ej. buscar "rock nacional" trae
+  // una banda literalmente llamada "Rock Nacional"), y eso se malinterpretaba como
+  // "el usuario pidió este artista" en vez de reconocer el género.
+  const requestedArtists = findRequestedArtists(mood, catalog);
+
   // Sumamos resultados en vivo de iTunes para artistas/géneros que el catálogo
   // curado no cubre. Si la búsqueda falla, seguimos solo con el catálogo local.
   const localKeys = new Set(
     catalog.map((s) => `${normalize(s.title)}::${normalize(s.artist)}`)
   );
-  const itunesResults = await searchItunesCandidates(mood, catalog);
+  const itunesResults = await searchItunesCandidates(
+    mood,
+    catalog,
+    Array.from(requestedArtists.values())
+  );
   const seenExternalKeys = new Set<string>();
   const externalSongs = itunesResults.filter((s) => {
     const key = `${normalize(s.title)}::${normalize(s.artist)}`;
@@ -335,13 +384,6 @@ export async function POST(req: NextRequest) {
 
   const { tokenSet, matchedTags, desiredEnergy } = extractSignals(mood);
   const normalizedMood = withGenreAliases(normalize(mood));
-  // Solo buscamos artistas pedidos en el catálogo curado. Si mirásemos también los
-  // resultados de iTunes caeríamos en un falso positivo autorreferencial: como esos
-  // resultados vienen de buscar el propio texto del mood, siempre aparece algún track
-  // o artista que se llama igual al término buscado (ej. buscar "rock nacional" trae
-  // una banda literalmente llamada "Rock Nacional"), y eso se malinterpretaba como
-  // "el usuario pidió este artista" en vez de reconocer el género.
-  const requestedArtists = findRequestedArtists(mood, catalog);
 
   const ARTIST_MATCH_BONUS = 50;
   const GENRE_MATCH_WEIGHT = 3;
@@ -351,7 +393,7 @@ export async function POST(req: NextRequest) {
     const matchedOn = new Set<string>();
 
     const songArtists = splitArtists(song.artist);
-    const matchedArtists = songArtists.filter((a) => requestedArtists.has(a));
+    const matchedArtists = songArtists.filter((a) => requestedArtists.has(normalize(a)));
     if (matchedArtists.length > 0) {
       score += ARTIST_MATCH_BONUS;
       matchedOn.add(`artist:${matchedArtists.join(", ")}`);
@@ -398,39 +440,72 @@ export async function POST(req: NextRequest) {
     ranked = ranked.filter((_, i) => i % step === 0);
   }
 
-  // Mezclamos entre los mejores matches para que generar de nuevo con el mismo
-  // mood no siempre tire la misma playlist, sin perder relevancia.
-  const POOL_SIZE = Math.max(24, count * 3);
-  // Barajamos para variedad, pero re-ordenamos por score (sort es estable) para que
-  // los matches fuertes (ej. artista pedido explícitamente) no queden afuera del corte.
-  const primaryPool = shuffle(ranked.slice(0, Math.min(POOL_SIZE, ranked.length))).sort(
-    (a, b) => b.score - a.score
-  );
-  // Sin shuffle: si hay que rellenar, priorizamos los siguientes mejores matches en vez de azar puro.
-  const backfillPool = ranked;
-
   const picks: { id: string; reason: string; song: Song }[] = [];
-  const usedArtists = new Map<string, number>();
-  for (const entry of primaryPool) {
-    if (picks.length >= count) break;
-    // Si el usuario pidió este artista explícitamente, no lo limitamos a 2 canciones.
-    const isRequestedArtist = splitArtists(entry.song.artist).some((a) => requestedArtists.has(a));
-    const artistCount = usedArtists.get(entry.song.artist) ?? 0;
-    if (!isRequestedArtist && artistCount >= 2) continue;
-    usedArtists.set(entry.song.artist, artistCount + 1);
 
-    picks.push({ id: entry.song.id, reason: buildReason(entry.matchedOn, entry.song.genre), song: entry.song });
-  }
+  if (requestedArtists.size > 0) {
+    // Pedido explícito de artista(s) puntuales: la playlist tiene que ser SOLO de esos
+    // artistas (nada de relleno con otros), repartiendo canciones entre todos los
+    // pedidos por igual (round-robin) en vez de llenarse con el primero que aparezca
+    // mejor rankeado. Si entre todos no llegan a `count`, devolvemos las que haya.
+    const buckets = new Map<string, typeof ranked>();
+    for (const entry of ranked) {
+      const matchedArtistKey = splitArtists(entry.song.artist)
+        .map((a) => normalize(a))
+        .find((na) => requestedArtists.has(na));
+      if (!matchedArtistKey) continue;
+      if (!buckets.has(matchedArtistKey)) buckets.set(matchedArtistKey, []);
+      buckets.get(matchedArtistKey)!.push(entry);
+    }
 
-  if (picks.length < count) {
-    for (const entry of backfillPool) {
+    const shuffledBuckets = Array.from(buckets.values()).map((list) => shuffle(list));
+    const seenIds = new Set<string>();
+    let addedInLastRound = true;
+    while (picks.length < count && addedInLastRound) {
+      addedInLastRound = false;
+      for (const bucket of shuffledBuckets) {
+        if (picks.length >= count) break;
+        while (bucket.length > 0) {
+          const entry = bucket.shift()!;
+          if (seenIds.has(entry.song.id)) continue;
+          seenIds.add(entry.song.id);
+          picks.push({ id: entry.song.id, reason: buildReason(entry.matchedOn, entry.song.genre), song: entry.song });
+          addedInLastRound = true;
+          break;
+        }
+      }
+    }
+  } else {
+    // Mezclamos entre los mejores matches para que generar de nuevo con el mismo
+    // mood no siempre tire la misma playlist, sin perder relevancia.
+    const POOL_SIZE = Math.max(24, count * 3);
+    // Barajamos para variedad, pero re-ordenamos por score (sort es estable) para que
+    // los matches fuertes no queden afuera del corte.
+    const primaryPool = shuffle(ranked.slice(0, Math.min(POOL_SIZE, ranked.length))).sort(
+      (a, b) => b.score - a.score
+    );
+    // Sin shuffle: si hay que rellenar, priorizamos los siguientes mejores matches en vez de azar puro.
+    const backfillPool = ranked;
+
+    const usedArtists = new Map<string, number>();
+    for (const entry of primaryPool) {
       if (picks.length >= count) break;
-      if (picks.some((p) => p.id === entry.song.id)) continue;
-      picks.push({
-        id: entry.song.id,
-        reason: buildReason(entry.matchedOn, entry.song.genre),
-        song: entry.song,
-      });
+      const artistCount = usedArtists.get(entry.song.artist) ?? 0;
+      if (artistCount >= 2) continue;
+      usedArtists.set(entry.song.artist, artistCount + 1);
+
+      picks.push({ id: entry.song.id, reason: buildReason(entry.matchedOn, entry.song.genre), song: entry.song });
+    }
+
+    if (picks.length < count) {
+      for (const entry of backfillPool) {
+        if (picks.length >= count) break;
+        if (picks.some((p) => p.id === entry.song.id)) continue;
+        picks.push({
+          id: entry.song.id,
+          reason: buildReason(entry.matchedOn, entry.song.genre),
+          song: entry.song,
+        });
+      }
     }
   }
 
@@ -443,12 +518,13 @@ export async function POST(req: NextRequest) {
   let playlistName: string;
   let intro: string;
   if (requestedArtists.size > 0) {
-    const artistList = Array.from(requestedArtists).join(" y ");
+    const artistList = Array.from(requestedArtists.values()).join(" y ");
     playlistName = `Playlist de ${artistList}`;
+    const foundFewer = picks.length < count ? ` Por ahora solo tenemos ${picks.length}.` : "";
     intro =
       topLabels.length > 0
-        ? `Lo que encontramos de ${artistList}, con foco en ${topLabels.join(" y ")}.`
-        : `Lo que encontramos de ${artistList}.`;
+        ? `Lo que encontramos de ${artistList}, con foco en ${topLabels.join(" y ")}.${foundFewer}`
+        : `Lo que encontramos de ${artistList}.${foundFewer}`;
   } else if (topLabels.length > 0) {
     playlistName = `Mixtape de ${topLabels.join(" y ")}`;
     intro = `Armada a partir de tu mood, con foco en ${topLabels.join(" y ")}.`;
