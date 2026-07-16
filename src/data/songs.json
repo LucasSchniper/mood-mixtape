@@ -2576,5 +2576,1876 @@
     "energy": 6,
     "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/05/17/51/051751c2-d6cd-c466-9e0d-c185d8e22897/886445195026.jpg/600x600bb.jpg",
     "country": "Colombia"
+  },
+  {
+    "id": "so-what-miles-davis",
+    "title": "So What",
+    "artist": "Miles Davis",
+    "moods": [
+      "chill",
+      "study/focus",
+      "smooth",
+      "night drive"
+    ],
+    "genre": "jazz",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/7f/9f/d6/mzi.vtnaewef.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "giant-steps-john-coltrane",
+    "title": "Giant Steps",
+    "artist": "John Coltrane",
+    "moods": [
+      "study/focus",
+      "energetic"
+    ],
+    "genre": "jazz",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4e/2f/8b/4e2f8b1f-7e14-1ce4-1c76-4683b1b9173d/603497847549.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "summertime-ella-fitzgerald",
+    "title": "Summertime",
+    "artist": "Ella Fitzgerald",
+    "moods": [
+      "chill",
+      "summer",
+      "smooth",
+      "nostalgic"
+    ],
+    "genre": "jazz",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/65/6e/fb/656efb76-ba63-3091-d458-7539948e45e4/14UMGIM51556.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "feeling-good-nina-simone",
+    "title": "Feeling Good",
+    "artist": "Nina Simone",
+    "moods": [
+      "confident",
+      "empowering",
+      "smooth"
+    ],
+    "genre": "jazz",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/18/db/05/18db0507-f276-d93d-a4a7-e856a3f1590a/13UAAIM08283.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "what-a-wonderful-world-louis-armstrong",
+    "title": "What a Wonderful World",
+    "artist": "Louis Armstrong",
+    "moods": [
+      "nostalgic",
+      "chill",
+      "romantic"
+    ],
+    "genre": "jazz",
+    "energy": 2,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2e/8c/2f/2e8c2f46-4148-d40d-61dc-2cc8e2493aab/12UMGIM11012.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "cantaloupe-island-herbie-hancock",
+    "title": "Cantaloupe Island",
+    "artist": "Herbie Hancock",
+    "moods": [
+      "chill",
+      "groovy",
+      "study/focus"
+    ],
+    "genre": "jazz",
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/54/49/9d/54499dbd-8b9c-4081-7f53-23e533d8be3d/00602537465316.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "my-funny-valentine-chet-baker",
+    "title": "My Funny Valentine",
+    "artist": "Chet Baker",
+    "moods": [
+      "romantic",
+      "melancholic",
+      "smooth",
+      "night drive"
+    ],
+    "genre": "jazz",
+    "energy": 2,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d6/c7/a3/d6c7a3e9-f0b4-bdaf-89d4-5e5cb468f0c2/00602557056563.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "hoochie-coochie-man-muddy-waters",
+    "title": "Hoochie Coochie Man",
+    "artist": "Muddy Waters",
+    "moods": [
+      "confident",
+      "groovy",
+      "classic rock"
+    ],
+    "genre": "blues",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0c/12/cf/0c12cfd9-7746-2645-3f6d-635c4c1b29c8/17UM1IM31341.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "boom-boom-john-lee-hooker",
+    "title": "Boom Boom",
+    "artist": "John Lee Hooker",
+    "moods": [
+      "groovy",
+      "confident",
+      "night drive"
+    ],
+    "genre": "blues",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9e/4b/7e/9e4b7e97-0217-2bfc-ba46-13fbc4c28825/00888072020597.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "at-last-etta-james",
+    "title": "At Last",
+    "artist": "Etta James",
+    "moods": [
+      "romantic",
+      "smooth",
+      "flirty"
+    ],
+    "genre": "blues",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/25/46/17/2546176c-0f7c-b1a0-20b8-5200ebc6c473/16UMGIM27321.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "cross-road-blues-robert-johnson",
+    "title": "Cross Road Blues",
+    "artist": "Robert Johnson",
+    "moods": [
+      "moody",
+      "classic rock",
+      "nostalgic"
+    ],
+    "genre": "blues",
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/01/0c/76/mzi.ctafvhuh.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "the-trooper-iron-maiden",
+    "title": "The Trooper",
+    "artist": "Iron Maiden",
+    "moods": [
+      "epic",
+      "energetic",
+      "gym"
+    ],
+    "genre": "heavy metal",
+    "energy": 9,
+    "country": "Reino Unido"
+  },
+  {
+    "id": "breaking-the-law-judas-priest",
+    "title": "Breaking the Law",
+    "artist": "Judas Priest",
+    "moods": [
+      "angsty",
+      "energetic",
+      "punk"
+    ],
+    "genre": "heavy metal",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/3e/ce/c7/3ecec7e6-66a3-7ca8-d70f-5a4512aa21ba/dj.stjulnox.jpg/600x600bb.jpg",
+    "country": "Reino Unido"
+  },
+  {
+    "id": "raining-blood-slayer",
+    "title": "Raining Blood",
+    "artist": "Slayer",
+    "moods": [
+      "angsty",
+      "epic",
+      "gym"
+    ],
+    "genre": "heavy metal",
+    "energy": 10,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/6b/83/2c/6b832cb7-7234-0fb7-3930-38d9c385dc9a/23UM1IM55794.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "symphony-of-destruction-megadeth",
+    "title": "Symphony of Destruction",
+    "artist": "Megadeth",
+    "moods": [
+      "angsty",
+      "energetic",
+      "gym"
+    ],
+    "genre": "heavy metal",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ff/79/20/ff79206c-4d9e-d991-a020-1e79651edf9a/13UABIM29570.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "walk-pantera",
+    "title": "Walk",
+    "artist": "Pantera",
+    "moods": [
+      "confident",
+      "angsty",
+      "gym"
+    ],
+    "genre": "heavy metal",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a7/82/85/a782854a-566a-c561-e2eb-71d46afc2618/081227974114.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "chop-suey-system-of-a-down",
+    "title": "Chop Suey!",
+    "artist": "System of a Down",
+    "moods": [
+      "angsty",
+      "energetic",
+      "epic"
+    ],
+    "genre": "heavy metal",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/82/51/52/825152b4-9423-b23b-c036-cc67ead732d4/888888046775.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "mi-gente-j-balvin",
+    "title": "Mi Gente",
+    "artist": "J Balvin",
+    "moods": [
+      "party",
+      "upbeat",
+      "energetic"
+    ],
+    "genre": "reggaeton",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/43/23/44/43234493-859a-53f6-e31c-805370dc33d7/18UMGIM19841.rgb.jpg/600x600bb.jpg",
+    "country": "Colombia"
+  },
+  {
+    "id": "pa-que-retozen-tego-calderon",
+    "title": "Pa' Que Retozen",
+    "artist": "Tego Calderón",
+    "moods": [
+      "party",
+      "upbeat"
+    ],
+    "genre": "reggaeton",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e0/33/df/e033df91-d865-de9d-1890-e52afd227613/602156fe-d3c5-47e2-910c-3df32e092c22.jpg/600x600bb.jpg",
+    "country": "Puerto Rico"
+  },
+  {
+    "id": "rakata-wisin",
+    "title": "Rakata",
+    "artist": "Wisin & Yandel",
+    "moods": [
+      "party",
+      "flirty",
+      "energetic"
+    ],
+    "genre": "reggaeton",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/7f/14/6e/7f146edc-7715-e531-c5a3-a27581ec4ff5/06UMGIM13568.rgb.jpg/600x600bb.jpg",
+    "country": "Puerto Rico"
+  },
+  {
+    "id": "china-anuel-aa",
+    "title": "China",
+    "artist": "Anuel AA",
+    "moods": [
+      "party",
+      "flirty"
+    ],
+    "genre": "reggaeton",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/75/a2/e6/75a2e657-0373-2667-cfbb-ee2247f4dff8/194491110918.jpg/600x600bb.jpg",
+    "country": "Puerto Rico"
+  },
+  {
+    "id": "provenza-karol-g",
+    "title": "Provenza",
+    "artist": "Karol G",
+    "moods": [
+      "upbeat",
+      "flirty",
+      "summer"
+    ],
+    "genre": "reggaeton",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/9b/01/44/9b0144e6-21ae-b53f-2b25-ef6c594b18a3/22UM1IM38716.rgb.jpg/600x600bb.jpg",
+    "country": "Colombia"
+  },
+  {
+    "id": "todo-de-ti-rauw-alejandro",
+    "title": "Todo de Ti",
+    "artist": "Rauw Alejandro",
+    "moods": [
+      "party",
+      "upbeat",
+      "flirty"
+    ],
+    "genre": "reggaeton",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/48/1e/c4/481ec4ab-5e42-8f6c-ad8f-086314e47eee/21CRGIM29092.rgb.jpg/600x600bb.jpg",
+    "country": "Puerto Rico"
+  },
+  {
+    "id": "ella-baila-sola-peso-pluma",
+    "title": "Ella Baila Sola",
+    "artist": "Peso Pluma, Eslabon Armado",
+    "moods": [
+      "party",
+      "upbeat"
+    ],
+    "genre": "regional mexicano",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b1/9b/95/b19b9506-5696-ad86-1c85-d198503adfbf/816144021906_Cover.jpg/600x600bb.jpg",
+    "country": "México"
+  },
+  {
+    "id": "nunca-es-suficiente-los-angeles-azules",
+    "title": "Nunca Es Suficiente",
+    "artist": "Los Ángeles Azules, Natalia Lafourcade",
+    "moods": [
+      "party",
+      "romantic",
+      "upbeat"
+    ],
+    "genre": "cumbia",
+    "energy": 6,
+    "country": "México"
+  },
+  {
+    "id": "cali-pachanguero-grupo-niche",
+    "title": "Cali Pachanguero",
+    "artist": "Grupo Niche",
+    "moods": [
+      "party",
+      "upbeat",
+      "groovy"
+    ],
+    "genre": "salsa",
+    "energy": 8,
+    "country": "Colombia"
+  },
+  {
+    "id": "se-rompio-el-amor-damas-gratis",
+    "title": "Se Rompió el Amor",
+    "artist": "Damas Gratis",
+    "moods": [
+      "party",
+      "heartbreak"
+    ],
+    "genre": "cumbia",
+    "energy": 7,
+    "country": "Argentina"
+  },
+  {
+    "id": "no-me-arrepiento-de-este-amor-gilda",
+    "title": "No Me Arrepiento de Este Amor",
+    "artist": "Gilda",
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "party"
+    ],
+    "genre": "cumbia",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/c9/d8/62/mzi.qvmnywfs.jpg/600x600bb.jpg",
+    "country": "Argentina"
+  },
+  {
+    "id": "la-vida-es-un-carnaval-celia-cruz",
+    "title": "La Vida Es Un Carnaval",
+    "artist": "Celia Cruz",
+    "moods": [
+      "party",
+      "upbeat",
+      "empowering"
+    ],
+    "genre": "salsa",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1a/22/3b/1a223bd0-2620-fdbf-c561-f1aee5cee9eb/00602567162544.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "pedro-navaja-ruben-blades",
+    "title": "Pedro Navaja",
+    "artist": "Rubén Blades",
+    "moods": [
+      "night drive",
+      "epic",
+      "nostalgic"
+    ],
+    "genre": "salsa",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b8/e3/8a/b8e38a85-4176-ee44-6d24-e6bb46635dd3/18CRGIM08715.rgb.jpg/600x600bb.jpg",
+    "country": "Panamá"
+  },
+  {
+    "id": "burbujas-de-amor-juan-luis-guerra",
+    "title": "Burbujas de Amor",
+    "artist": "Juan Luis Guerra",
+    "moods": [
+      "romantic",
+      "chill",
+      "flirty"
+    ],
+    "genre": "bachata",
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a5/9e/0a/a59e0a7d-417a-1689-5d60-0e1523c08f9a/s05.xxiwuqne.jpg/600x600bb.jpg",
+    "country": "República Dominicana"
+  },
+  {
+    "id": "cheer-up-twice",
+    "title": "Cheer Up",
+    "artist": "TWICE",
+    "moods": [
+      "upbeat",
+      "party",
+      "energetic"
+    ],
+    "genre": "k-pop",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/46/66/7d4666f3-1dec-c3ae-e81c-1efef0ae5d6b/00602508870033_Cover.jpg/600x600bb.jpg",
+    "country": "Corea del Sur"
+  },
+  {
+    "id": "super-shy-newjeans",
+    "title": "Super Shy",
+    "artist": "NewJeans",
+    "moods": [
+      "upbeat",
+      "energetic",
+      "flirty"
+    ],
+    "genre": "k-pop",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/63/e5/e2/63e5e2e4-829b-924d-a1dc-8058a1d69bd4/196922462702_Cover.jpg/600x600bb.jpg",
+    "country": "Corea del Sur"
+  },
+  {
+    "id": "s-class-stray-kids",
+    "title": "S-Class",
+    "artist": "Stray Kids",
+    "moods": [
+      "confident",
+      "energetic",
+      "epic"
+    ],
+    "genre": "k-pop",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/3b/1e/5a3b1e2f-1b70-a4b0-6d4d-a33a770f361f/738676860696_Cover.jpg/600x600bb.jpg",
+    "country": "Corea del Sur"
+  },
+  {
+    "id": "summer-calvin-harris",
+    "title": "Summer",
+    "artist": "Calvin Harris",
+    "moods": [
+      "summer",
+      "upbeat",
+      "party"
+    ],
+    "genre": "edm",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/da/50/cc/da50cc80-3515-a38d-369b-0d700ffd249d/886444820448.jpg/600x600bb.jpg",
+    "country": "Reino Unido"
+  },
+  {
+    "id": "don-t-you-worry-child-swedish-house-mafia",
+    "title": "Don't You Worry Child",
+    "artist": "Swedish House Mafia",
+    "moods": [
+      "night drive",
+      "epic",
+      "upbeat"
+    ],
+    "genre": "edm",
+    "energy": 8,
+    "country": "Suecia"
+  },
+  {
+    "id": "animals-martin-garrix",
+    "title": "Animals",
+    "artist": "Martin Garrix",
+    "moods": [
+      "party",
+      "energetic",
+      "gym"
+    ],
+    "genre": "edm",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6e/1e/f0/6e1ef055-195a-bb73-d5a8-5926058366a5/8712944577525.png/600x600bb.jpg",
+    "country": "Países Bajos"
+  },
+  {
+    "id": "strobe-deadmau5",
+    "title": "Strobe",
+    "artist": "Deadmau5",
+    "moods": [
+      "night drive",
+      "chill",
+      "epic"
+    ],
+    "genre": "edm",
+    "energy": 5,
+    "country": "Canadá"
+  },
+  {
+    "id": "losing-it-fisher",
+    "title": "Losing It",
+    "artist": "FISHER",
+    "moods": [
+      "party",
+      "energetic",
+      "gym"
+    ],
+    "genre": "edm",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b6/d0/78/b6d078c6-5a24-063e-548e-0d28af65dab9/18UMGIM41789.rgb.jpg/600x600bb.jpg",
+    "country": "Australia"
+  },
+  {
+    "id": "lose-yourself-eminem",
+    "title": "Lose Yourself",
+    "artist": "Eminem",
+    "moods": [
+      "gym",
+      "confident",
+      "epic",
+      "energetic"
+    ],
+    "genre": "hip-hop",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/08/23/fc/0823fcd9-cb44-695b-32bf-b3bf51d9f800/00606949351229.rgb.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "empire-state-of-mind-jay-z",
+    "title": "Empire State of Mind",
+    "artist": "JAY-Z, Alicia Keys",
+    "moods": [
+      "confident",
+      "empowering",
+      "night drive"
+    ],
+    "genre": "hip-hop",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/b7/77/66/b77766d8-c73f-8a5d-376d-926db33475f7/884977002508.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "hey-ya-outkast",
+    "title": "Hey Ya!",
+    "artist": "OutKast",
+    "moods": [
+      "party",
+      "upbeat",
+      "groovy"
+    ],
+    "genre": "hip-hop",
+    "energy": 8,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "earfquake-tyler",
+    "title": "EARFQUAKE",
+    "artist": "Tyler, The Creator",
+    "moods": [
+      "indie",
+      "chill",
+      "romantic"
+    ],
+    "genre": "hip-hop",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6a/79/64/6a7964d9-276c-9064-336d-255e4e6d6cba/artwork.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "praise-the-lord-da-shine-a-ap-rocky",
+    "title": "Praise The Lord (Da Shine)",
+    "artist": "A$AP Rocky, Skepta",
+    "moods": [
+      "confident",
+      "party",
+      "energetic"
+    ],
+    "genre": "hip-hop",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d3/91/9c/d3919c54-3426-07a2-91a4-b4e46b2a8d34/886447076453.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "sicko-mode-travis-scott",
+    "title": "SICKO MODE",
+    "artist": "Travis Scott",
+    "moods": [
+      "party",
+      "energetic",
+      "night drive"
+    ],
+    "genre": "hip-hop",
+    "energy": 9,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "ella-no-es-tuya-cris-mj",
+    "title": "Ella No Es Tuya",
+    "artist": "Cris MJ",
+    "moods": [
+      "party",
+      "flirty"
+    ],
+    "genre": "trap",
+    "energy": 7,
+    "country": "Chile"
+  },
+  {
+    "id": "alocao-ecko",
+    "title": "Alocao",
+    "artist": "Ecko",
+    "moods": [
+      "party",
+      "energetic"
+    ],
+    "genre": "trap",
+    "energy": 8,
+    "country": "Chile"
+  },
+  {
+    "id": "fiebre-bad-gyal",
+    "title": "Fiebre",
+    "artist": "Bad Gyal",
+    "moods": [
+      "party",
+      "flirty",
+      "night drive"
+    ],
+    "genre": "trap",
+    "energy": 7,
+    "country": "España",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6e/8c/f9/6e8cf9d2-63a3-26bf-d1fd-b099723cc377/8429006913947.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "volver-carlos-gardel",
+    "title": "Volver",
+    "artist": "Carlos Gardel",
+    "moods": [
+      "nostalgic",
+      "melancholic",
+      "sad"
+    ],
+    "genre": "tango",
+    "energy": 3,
+    "country": "Argentina",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/46/61/e0/4661e0d2-59ea-fd30-4208-d453cdc267ae/tapa_-_Pack_GARDEL.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "libertango-astor-piazzolla",
+    "title": "Libertango",
+    "artist": "Astor Piazzolla",
+    "moods": [
+      "epic",
+      "moody",
+      "night drive"
+    ],
+    "genre": "tango",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/db/5a/96/mzi.bgdhitza.tif/600x600bb.jpg",
+    "country": "Argentina"
+  },
+  {
+    "id": "sur-anibal-troilo",
+    "title": "Sur",
+    "artist": "Aníbal Troilo",
+    "moods": [
+      "nostalgic",
+      "melancholic"
+    ],
+    "genre": "tango",
+    "energy": 2,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/40/bb/c1/40bbc127-f49d-185e-fb7e-f566d19bb49c/888831454878.jpg/600x600bb.jpg",
+    "country": "Argentina"
+  },
+  {
+    "id": "aguas-de-marco-antonio-carlos-jobim",
+    "title": "Águas de Março",
+    "artist": "Antônio Carlos Jobim, Elis Regina",
+    "moods": [
+      "chill",
+      "summer",
+      "smooth"
+    ],
+    "genre": "bossa nova",
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f1/6e/0c/f16e0cca-3d7a-bd6c-6695-846b583c53b4/18UMGIM64810.rgb.jpg/600x600bb.jpg",
+    "country": "Brasil"
+  },
+  {
+    "id": "sozinho-caetano-veloso",
+    "title": "Sozinho",
+    "artist": "Caetano Veloso",
+    "moods": [
+      "chill",
+      "romantic",
+      "smooth"
+    ],
+    "genre": "bossa nova",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/04/77/0d/04770dcd-6222-55d5-77c1-537bf15c4da4/06UMGIM47097.rgb.jpg/600x600bb.jpg",
+    "country": "Brasil"
+  },
+  {
+    "id": "envolver-anitta",
+    "title": "Envolver",
+    "artist": "Anitta",
+    "moods": [
+      "party",
+      "flirty",
+      "summer"
+    ],
+    "genre": "pop latino",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c5/ba/2b/c5ba2b96-ff06-5f58-35ad-1c070973cee7/190296362989.jpg/600x600bb.jpg",
+    "country": "Brasil"
+  },
+  {
+    "id": "ring-of-fire-johnny-cash",
+    "title": "Ring of Fire",
+    "artist": "Johnny Cash",
+    "moods": [
+      "classic rock",
+      "confident",
+      "romantic"
+    ],
+    "genre": "country",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/5f/13/bc/5f13bc30-0f68-ed45-466c-b491e9201558/dj.yjweejkt.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "on-the-road-again-willie-nelson",
+    "title": "On the Road Again",
+    "artist": "Willie Nelson",
+    "moods": [
+      "road trip",
+      "upbeat",
+      "chill"
+    ],
+    "genre": "country",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/78/a5/e4/78a5e4a0-0a43-18fa-6c36-25ecd4587c1f/dj.gomnsxgu.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "tennessee-whiskey-chris-stapleton",
+    "title": "Tennessee Whiskey",
+    "artist": "Chris Stapleton",
+    "moods": [
+      "romantic",
+      "smooth",
+      "night drive"
+    ],
+    "genre": "country",
+    "energy": 3,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e2/4b/60/e24b6016-8278-bb18-cf5d-d44bf68371da/00602547223838.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "slow-burn-kacey-musgraves",
+    "title": "Slow Burn",
+    "artist": "Kacey Musgraves",
+    "moods": [
+      "chill",
+      "nostalgic",
+      "summer"
+    ],
+    "genre": "country",
+    "energy": 3,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/61/45/e8/6145e88a-6a79-fab1-ad8f-5ffdcbf44a28/18UMGIM03879.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "here-comes-the-sun-the-beatles",
+    "title": "Here Comes the Sun",
+    "artist": "The Beatles",
+    "moods": [
+      "upbeat",
+      "chill",
+      "nostalgic",
+      "summer"
+    ],
+    "genre": "classic rock",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/df/db/61/dfdb615d-47f8-06e9-9533-b96daccc029f/18UMGIM31076.rgb.jpg/600x600bb.jpg",
+    "country": "Reino Unido"
+  },
+  {
+    "id": "paint-it-black-the-rolling-stones",
+    "title": "Paint It Black",
+    "artist": "The Rolling Stones",
+    "moods": [
+      "moody",
+      "angsty",
+      "epic"
+    ],
+    "genre": "classic rock",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cd/89/04/cd890449-e58f-7257-2c60-9c8c31f24ce3/13ABKIM00063.rgb.jpg/600x600bb.jpg",
+    "country": "Reino Unido"
+  },
+  {
+    "id": "stairway-to-heaven-led-zeppelin",
+    "title": "Stairway to Heaven",
+    "artist": "Led Zeppelin",
+    "moods": [
+      "epic",
+      "nostalgic",
+      "psychedelic"
+    ],
+    "genre": "classic rock",
+    "energy": 6,
+    "country": "Reino Unido",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/15/9b/5c159b27-95ca-b9a7-84e3-28e795fffd39/dj.kvkrpptq.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "wish-you-were-here-pink-floyd",
+    "title": "Wish You Were Here",
+    "artist": "Pink Floyd",
+    "moods": [
+      "nostalgic",
+      "melancholic",
+      "chill"
+    ],
+    "genre": "classic rock",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/aa/e0/ab/aae0ab6a-d906-a189-81bf-70b56aa43f7a/886445635843.jpg/600x600bb.jpg",
+    "country": "Reino Unido"
+  },
+  {
+    "id": "riders-on-the-storm-the-doors",
+    "title": "Riders on the Storm",
+    "artist": "The Doors",
+    "moods": [
+      "moody",
+      "night drive",
+      "rainy day",
+      "psychedelic"
+    ],
+    "genre": "classic rock",
+    "energy": 4,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/03/c6/2d/03c62d8a-487f-78c3-8416-488cfac664eb/dj.sboowgda.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "the-sound-of-silence-simon",
+    "title": "The Sound of Silence",
+    "artist": "Simon & Garfunkel",
+    "moods": [
+      "melancholic",
+      "nostalgic",
+      "chill",
+      "study/focus"
+    ],
+    "genre": "folk rock",
+    "energy": 2,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f9/8c/fa/f98cfa9e-282b-8a4f-33bd-ff3de9269963/074640926921.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "alive-pearl-jam",
+    "title": "Alive",
+    "artist": "Pearl Jam",
+    "moods": [
+      "energetic",
+      "angsty",
+      "epic"
+    ],
+    "genre": "grunge",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e0/e1/7c/e0e17cf0-62e5-6312-f3df-2462960cc8f1/884977724745.jpg/600x600bb.jpg",
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "under-the-bridge-red-hot-chili-peppers",
+    "title": "Under the Bridge",
+    "artist": "Red Hot Chili Peppers",
+    "moods": [
+      "melancholic",
+      "nostalgic",
+      "chill"
+    ],
+    "genre": "alternative rock",
+    "energy": 4,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c9/c8/b2/c9c8b20d-42b8-a2a6-1678-54b997e845f5/093624931973.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "ironic-alanis-morissette",
+    "title": "Ironic",
+    "artist": "Alanis Morissette",
+    "moods": [
+      "angsty",
+      "upbeat",
+      "confident"
+    ],
+    "genre": "alternative rock",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/5f/3b/ca/5f3bca60-024c-d4aa-d638-6d58e7e81461/mza_1406686761081396977.jpg/600x600bb.jpg",
+    "country": "Canadá"
+  },
+  {
+    "id": "don-t-speak-no-doubt",
+    "title": "Don't Speak",
+    "artist": "No Doubt",
+    "moods": [
+      "heartbreak",
+      "sad",
+      "angsty"
+    ],
+    "genre": "alternative rock",
+    "energy": 5,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fe/0a/68/fe0a687a-537e-e902-0778-90465c118f77/00602547870575.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "last-nite-the-strokes",
+    "title": "Last Nite",
+    "artist": "The Strokes",
+    "moods": [
+      "indie",
+      "energetic",
+      "night drive"
+    ],
+    "genre": "indie rock",
+    "energy": 7,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "take-me-out-franz-ferdinand",
+    "title": "Take Me Out",
+    "artist": "Franz Ferdinand",
+    "moods": [
+      "party",
+      "indie",
+      "energetic"
+    ],
+    "genre": "indie rock",
+    "energy": 8,
+    "country": "Reino Unido"
+  },
+  {
+    "id": "a-punk-vampire-weekend",
+    "title": "A-Punk",
+    "artist": "Vampire Weekend",
+    "moods": [
+      "upbeat",
+      "indie",
+      "summer"
+    ],
+    "genre": "indie rock",
+    "energy": 7,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "kids-mgmt",
+    "title": "Kids",
+    "artist": "MGMT",
+    "moods": [
+      "psychedelic",
+      "upbeat",
+      "nostalgic"
+    ],
+    "genre": "indie rock",
+    "energy": 7,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "what-you-know-two-door-cinema-club",
+    "title": "What You Know",
+    "artist": "Two Door Cinema Club",
+    "moods": [
+      "upbeat",
+      "indie",
+      "energetic"
+    ],
+    "genre": "indie rock",
+    "energy": 7,
+    "country": "Irlanda"
+  },
+  {
+    "id": "espresso-sabrina-carpenter",
+    "title": "Espresso",
+    "artist": "Sabrina Carpenter",
+    "moods": [
+      "upbeat",
+      "confident",
+      "summer",
+      "flirty"
+    ],
+    "genre": "pop",
+    "energy": 7,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a1/1c/ca/a11ccab6-7d4c-e041-d028-998bcebeb709/24UMGIM61704.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "good-luck-babe-chappell-roan",
+    "title": "Good Luck, Babe!",
+    "artist": "Chappell Roan",
+    "moods": [
+      "upbeat",
+      "confident",
+      "heartbreak"
+    ],
+    "genre": "pop",
+    "energy": 7,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "beautiful-things-benson-boone",
+    "title": "Beautiful Things",
+    "artist": "Benson Boone",
+    "moods": [
+      "romantic",
+      "moody",
+      "epic"
+    ],
+    "genre": "pop",
+    "energy": 5,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/54/f4/92/54f49210-e260-b519-ebbd-f4f40ee710cd/054391342751.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "paint-the-town-red-doja-cat",
+    "title": "Paint The Town Red",
+    "artist": "Doja Cat",
+    "moods": [
+      "confident",
+      "party",
+      "energetic"
+    ],
+    "genre": "pop",
+    "energy": 7,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "von-dutch-charli-xcx",
+    "title": "Von dutch",
+    "artist": "Charli XCX",
+    "moods": [
+      "party",
+      "confident",
+      "night drive"
+    ],
+    "genre": "pop",
+    "energy": 8,
+    "country": "Reino Unido"
+  },
+  {
+    "id": "greedy-tate-mcrae",
+    "title": "Greedy",
+    "artist": "Tate McRae",
+    "moods": [
+      "party",
+      "flirty",
+      "energetic"
+    ],
+    "genre": "pop",
+    "energy": 8,
+    "country": "Canadá"
+  },
+  {
+    "id": "let-s-get-it-on-marvin-gaye",
+    "title": "Let's Get It On",
+    "artist": "Marvin Gaye",
+    "moods": [
+      "romantic",
+      "flirty",
+      "smooth"
+    ],
+    "genre": "soul",
+    "energy": 4,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "respect-aretha-franklin",
+    "title": "Respect",
+    "artist": "Aretha Franklin",
+    "moods": [
+      "empowering",
+      "confident",
+      "upbeat"
+    ],
+    "genre": "soul",
+    "energy": 7,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/31/ee/d131eec4-614c-d661-b580-3dc32b8547e8/603497896622.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "a-change-is-gonna-come-sam-cooke",
+    "title": "A Change Is Gonna Come",
+    "artist": "Sam Cooke",
+    "moods": [
+      "epic",
+      "nostalgic",
+      "empowering"
+    ],
+    "genre": "soul",
+    "energy": 3,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/af/dc/5cafdc13-ba15-bcc9-800c-dd42aac696ee/00018771021025.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "let-s-stay-together-al-green",
+    "title": "Let's Stay Together",
+    "artist": "Al Green",
+    "moods": [
+      "romantic",
+      "smooth",
+      "chill"
+    ],
+    "genre": "soul",
+    "energy": 4,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d8/ec/4f/d8ec4f92-0691-9151-1738-9fbe2e19a270/886445144888.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "i-wanna-dance-with-somebody-whitney-houston",
+    "title": "I Wanna Dance with Somebody",
+    "artist": "Whitney Houston",
+    "moods": [
+      "party",
+      "upbeat",
+      "energetic"
+    ],
+    "genre": "pop",
+    "energy": 8,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/86/b5/25/86b525b1-bff1-4bf6-6112-531251b3d672/dj.hthdmusj.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "le-freak-chic",
+    "title": "Le Freak",
+    "artist": "Chic",
+    "moods": [
+      "party",
+      "groovy",
+      "upbeat"
+    ],
+    "genre": "disco",
+    "energy": 8,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/9a/48/8d/9a488d1f-3257-38e7-110a-b0ab9a58bee9/081227323325.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "i-feel-love-donna-summer",
+    "title": "I Feel Love",
+    "artist": "Donna Summer",
+    "moods": [
+      "party",
+      "night drive",
+      "groovy"
+    ],
+    "genre": "disco",
+    "energy": 7,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/82/13/19/8213190b-60a9-95cd-9cc0-0948e08a085a/06UMGIM05259.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "celebration-kool",
+    "title": "Celebration",
+    "artist": "Kool & The Gang",
+    "moods": [
+      "party",
+      "upbeat",
+      "empowering"
+    ],
+    "genre": "disco",
+    "energy": 8,
+    "country": "Estados Unidos"
+  },
+  {
+    "id": "give-up-the-funk-tear-the-roof-off-the-sucker-parliament",
+    "title": "Give Up the Funk (Tear the Roof off the Sucker)",
+    "artist": "Parliament",
+    "moods": [
+      "party",
+      "groovy",
+      "energetic"
+    ],
+    "genre": "funk",
+    "energy": 8,
+    "country": "Estados Unidos",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/b3/dc/3a/b3dc3af0-b044-6914-1cdf-2ba2c8b36169/00602547748492.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "mil-horas-los-abuelos-de-la-nada",
+    "title": "Mil Horas",
+    "artist": "Los Abuelos de la Nada",
+    "moods": [
+      "nostalgic",
+      "romantic",
+      "upbeat"
+    ],
+    "genre": "rock nacional",
+    "energy": 5,
+    "country": "Argentina",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/03/a4/12/03a4125e-9d72-3ff6-a9c0-952252b79541/23UM1IM13571.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "wadu-wadu-virus",
+    "title": "Wadu Wadu",
+    "artist": "Virus",
+    "moods": [
+      "party",
+      "upbeat",
+      "groovy"
+    ],
+    "genre": "rock nacional",
+    "energy": 7,
+    "country": "Argentina",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/97/55/fa/9755fa59-635c-a213-001b-5b1d674dbd2b/mzi.koimlcbg.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "mi-enfermedad-fabiana-cantilo",
+    "title": "Mi Enfermedad",
+    "artist": "Fabiana Cantilo",
+    "moods": [
+      "heartbreak",
+      "sad",
+      "romantic"
+    ],
+    "genre": "rock nacional",
+    "energy": 3,
+    "country": "Argentina",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/af/58/2f/mzi.ccyjxvdr.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "no-somos-los-mismos-todos-tus-muertos",
+    "title": "No Somos Los Mismos",
+    "artist": "Todos Tus Muertos",
+    "moods": [
+      "angsty",
+      "punk",
+      "energetic"
+    ],
+    "genre": "punk",
+    "energy": 8,
+    "country": "Argentina",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/71/5d/f9/715df9ae-d4a2-e968-5a01-6253de0e7d45/820200076892.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "ahogado-massacre",
+    "title": "Ahogado",
+    "artist": "Massacre",
+    "moods": [
+      "angsty",
+      "punk",
+      "moody"
+    ],
+    "genre": "punk",
+    "energy": 7,
+    "country": "Argentina"
+  },
+  {
+    "id": "ji-ji-ji-los-twist",
+    "title": "Ji Ji Ji",
+    "artist": "Los Twist",
+    "moods": [
+      "party",
+      "upbeat",
+      "groovy"
+    ],
+    "genre": "rock nacional",
+    "energy": 7,
+    "country": "Argentina",
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/83/15/cc/8315ccdd-5a8d-8344-fa15-72e4cb64145e/886444533171.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "todo-a-pulmon-v8",
+    "title": "Todo a Pulmón",
+    "artist": "V8",
+    "moods": [
+      "angsty",
+      "epic",
+      "gym"
+    ],
+    "genre": "heavy metal",
+    "energy": 9,
+    "country": "Argentina"
+  },
+  {
+    "id": "el-rey-vicente-fernandez",
+    "title": "El Rey",
+    "artist": "Vicente Fernández",
+    "moods": [
+      "epic",
+      "confident",
+      "nostalgic"
+    ],
+    "genre": "ranchera",
+    "energy": 5,
+    "country": "México"
+  },
+  {
+    "id": "eres-cafe-tacvba",
+    "title": "Eres",
+    "artist": "Café Tacvba",
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "smooth"
+    ],
+    "genre": "rock en español",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c0/82/4e/c0824e1f-1c08-93d1-2377-8b8d13c64242/06UMGIM10078.rgb.jpg/600x600bb.jpg",
+    "country": "México"
+  },
+  {
+    "id": "frijolero-molotov",
+    "title": "Frijolero",
+    "artist": "Molotov",
+    "moods": [
+      "angsty",
+      "energetic",
+      "punk"
+    ],
+    "genre": "rock en español",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/af/ba/38/afba3847-35a2-60a2-5263-ea567bf7fa8b/888831894070.jpg/600x600bb.jpg",
+    "country": "México"
+  },
+  {
+    "id": "me-voy-julieta-venegas",
+    "title": "Me Voy",
+    "artist": "Julieta Venegas",
+    "moods": [
+      "heartbreak",
+      "upbeat",
+      "empowering"
+    ],
+    "genre": "pop",
+    "energy": 6,
+    "country": "México"
+  },
+  {
+    "id": "hasta-la-raiz-natalia-lafourcade",
+    "title": "Hasta la Raíz",
+    "artist": "Natalia Lafourcade",
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "chill"
+    ],
+    "genre": "pop",
+    "energy": 4,
+    "country": "México"
+  },
+  {
+    "id": "mino-los-bunkers",
+    "title": "Miño",
+    "artist": "Los Bunkers",
+    "moods": [
+      "nostalgic",
+      "romantic",
+      "upbeat"
+    ],
+    "genre": "rock en español",
+    "energy": 5,
+    "country": "Chile"
+  },
+  {
+    "id": "1977-ana-tijoux",
+    "title": "1977",
+    "artist": "Ana Tijoux",
+    "moods": [
+      "confident",
+      "night drive",
+      "moody"
+    ],
+    "genre": "hip-hop",
+    "energy": 5,
+    "country": "Chile"
+  },
+  {
+    "id": "tu-falta-de-querer-mon-laferte",
+    "title": "Tu Falta de Querer",
+    "artist": "Mon Laferte",
+    "moods": [
+      "heartbreak",
+      "sad",
+      "empowering"
+    ],
+    "genre": "pop",
+    "energy": 4,
+    "country": "Chile"
+  },
+  {
+    "id": "cuando-estas-tu-gian-marco",
+    "title": "Cuando Estás Tú",
+    "artist": "Gian Marco",
+    "moods": [
+      "romantic",
+      "chill"
+    ],
+    "genre": "pop",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music30/v4/b4/8e/af/b48eaf17-1dba-cdd1-0d64-755b7ed356cf/cover.jpg/600x600bb.jpg",
+    "country": "Perú"
+  },
+  {
+    "id": "maria-lando-susana-baca",
+    "title": "María Landó",
+    "artist": "Susana Baca",
+    "moods": [
+      "chill",
+      "melancholic",
+      "moody"
+    ],
+    "genre": "folk",
+    "energy": 2,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2003/m11/d20/h16/s05.uxhffcla.jpg/600x600bb.jpg",
+    "country": "Perú"
+  },
+  {
+    "id": "zafar-la-vela-puerca",
+    "title": "Zafar",
+    "artist": "La Vela Puerca",
+    "moods": [
+      "party",
+      "energetic",
+      "upbeat"
+    ],
+    "genre": "ska",
+    "energy": 8,
+    "country": "Uruguay"
+  },
+  {
+    "id": "al-vacio-no-te-va-gustar",
+    "title": "Al Vacío",
+    "artist": "No Te Va Gustar",
+    "moods": [
+      "energetic",
+      "angsty",
+      "epic"
+    ],
+    "genre": "rock alternativo",
+    "energy": 7,
+    "country": "Uruguay"
+  },
+  {
+    "id": "adios-juventud-jaime-roos",
+    "title": "Adiós Juventud",
+    "artist": "Jaime Roos",
+    "moods": [
+      "nostalgic",
+      "upbeat"
+    ],
+    "genre": "candombe",
+    "energy": 5,
+    "country": "Uruguay"
+  },
+  {
+    "id": "chan-chan-buena-vista-social-club",
+    "title": "Chan Chan",
+    "artist": "Buena Vista Social Club",
+    "moods": [
+      "chill",
+      "nostalgic",
+      "smooth"
+    ],
+    "genre": "son cubano",
+    "energy": 3,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/93/8b/5a938b3e-a74d-9c8b-dcf1-c9c1f83498da/4050538455618.jpg/600x600bb.jpg",
+    "country": "Cuba"
+  },
+  {
+    "id": "la-gozadera-gente-de-zona",
+    "title": "La Gozadera",
+    "artist": "Gente de Zona, Marc Anthony",
+    "moods": [
+      "party",
+      "upbeat",
+      "energetic"
+    ],
+    "genre": "salsa",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c6/15/89/c615892a-9b25-e601-9d9d-a12e1e8bf76d/886445490947.jpg/600x600bb.jpg",
+    "country": "Cuba"
+  },
+  {
+    "id": "propuesta-indecente-romeo-santos",
+    "title": "Propuesta Indecente",
+    "artist": "Romeo Santos",
+    "moods": [
+      "romantic",
+      "flirty",
+      "smooth"
+    ],
+    "genre": "bachata",
+    "energy": 4,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8f/fc/6e/8ffc6efb-353f-46ac-eeb6-8247c01cfc87/886444383691.jpg/600x600bb.jpg",
+    "country": "República Dominicana"
+  },
+  {
+    "id": "volando-voy-camaron-de-la-isla",
+    "title": "Volando Voy",
+    "artist": "Camarón de la Isla",
+    "moods": [
+      "epic",
+      "moody",
+      "nostalgic"
+    ],
+    "genre": "flamenco",
+    "energy": 5,
+    "country": "España"
+  },
+  {
+    "id": "malamente-rosalia",
+    "title": "Malamente",
+    "artist": "ROSALÍA",
+    "moods": [
+      "confident",
+      "energetic",
+      "night drive"
+    ],
+    "genre": "flamenco pop",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2c/55/e1/2c55e13f-15d8-1c7c-1826-c5fa55deaa8f/886447217139.jpg/600x600bb.jpg",
+    "country": "España"
+  },
+  {
+    "id": "la-vie-en-rose-edith-piaf",
+    "title": "La Vie en Rose",
+    "artist": "Édith Piaf",
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "smooth"
+    ],
+    "genre": "chanson",
+    "energy": 2,
+    "country": "Francia"
+  },
+  {
+    "id": "alors-on-danse-stromae",
+    "title": "Alors on Danse",
+    "artist": "Stromae",
+    "moods": [
+      "party",
+      "night drive",
+      "moody"
+    ],
+    "genre": "electronic",
+    "energy": 7,
+    "country": "Bélgica"
+  },
+  {
+    "id": "clandestino-manu-chao",
+    "title": "Clandestino",
+    "artist": "Manu Chao",
+    "moods": [
+      "chill",
+      "road trip",
+      "nostalgic"
+    ],
+    "genre": "world",
+    "energy": 4,
+    "country": "Francia"
+  },
+  {
+    "id": "autobahn-kraftwerk",
+    "title": "Autobahn",
+    "artist": "Kraftwerk",
+    "moods": [
+      "study/focus",
+      "night drive",
+      "psychedelic"
+    ],
+    "genre": "electronic",
+    "energy": 4,
+    "country": "Alemania"
+  },
+  {
+    "id": "du-hast-rammstein",
+    "title": "Du Hast",
+    "artist": "Rammstein",
+    "moods": [
+      "angsty",
+      "gym",
+      "energetic"
+    ],
+    "genre": "industrial metal",
+    "energy": 9,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/78/af/45/78af45f6-e4e6-5681-c1f6-a20e3949ab8c/18UMGIM31237.rgb.jpg/600x600bb.jpg",
+    "country": "Alemania"
+  },
+  {
+    "id": "piu-bella-cosa-eros-ramazzotti",
+    "title": "Più Bella Cosa",
+    "artist": "Eros Ramazzotti",
+    "moods": [
+      "romantic",
+      "upbeat"
+    ],
+    "genre": "pop italiano",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Features/08/d3/f6/dj.offlunts.jpg/600x600bb.jpg",
+    "country": "Italia"
+  },
+  {
+    "id": "i-wanna-be-your-slave-maneskin",
+    "title": "I Wanna Be Your Slave",
+    "artist": "Måneskin",
+    "moods": [
+      "confident",
+      "energetic",
+      "party"
+    ],
+    "genre": "rock",
+    "energy": 8,
+    "country": "Italia"
+  },
+  {
+    "id": "idol-yoasobi",
+    "title": "Idol",
+    "artist": "YOASOBI",
+    "moods": [
+      "energetic",
+      "upbeat",
+      "confident"
+    ],
+    "genre": "j-pop",
+    "energy": 8,
+    "country": "Japón"
+  },
+  {
+    "id": "first-love-utada-hikaru",
+    "title": "First Love",
+    "artist": "Utada Hikaru",
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "sad"
+    ],
+    "genre": "j-pop",
+    "energy": 3,
+    "country": "Japón"
+  },
+  {
+    "id": "plastic-love-mariya-takeuchi",
+    "title": "Plastic Love",
+    "artist": "Mariya Takeuchi",
+    "moods": [
+      "chill",
+      "night drive",
+      "nostalgic",
+      "groovy"
+    ],
+    "genre": "city pop",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1b/bf/7d/1bbf7d0d-fe41-4e4b-29d0-7feb373a9e4c/190295078515.jpg/600x600bb.jpg",
+    "country": "Japón"
+  },
+  {
+    "id": "last-last-burna-boy",
+    "title": "Last Last",
+    "artist": "Burna Boy",
+    "moods": [
+      "heartbreak",
+      "moody",
+      "upbeat"
+    ],
+    "genre": "afrobeats",
+    "energy": 6,
+    "country": "Nigeria"
+  },
+  {
+    "id": "essence-wizkid",
+    "title": "Essence",
+    "artist": "Wizkid, Tems",
+    "moods": [
+      "romantic",
+      "chill",
+      "flirty",
+      "summer"
+    ],
+    "genre": "afrobeats",
+    "energy": 5,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/52/bf/2a/52bf2ad2-877b-de71-9078-a103230956c4/886449403936.jpg/600x600bb.jpg",
+    "country": "Nigeria"
+  },
+  {
+    "id": "calm-down-rema",
+    "title": "Calm Down",
+    "artist": "Rema",
+    "moods": [
+      "romantic",
+      "upbeat",
+      "flirty"
+    ],
+    "genre": "afrobeats",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b2/b4/7c/b2b47cf9-d8e2-53f6-5c62-c974d665c95b/22UMGIM08994.rgb.jpg/600x600bb.jpg",
+    "country": "Nigeria"
+  },
+  {
+    "id": "superman-black-coffee",
+    "title": "Superman",
+    "artist": "Black Coffee, Bucie",
+    "moods": [
+      "chill",
+      "night drive",
+      "groovy"
+    ],
+    "genre": "amapiano",
+    "energy": 5,
+    "country": "Sudáfrica"
+  },
+  {
+    "id": "water-tyla",
+    "title": "Water",
+    "artist": "Tyla",
+    "moods": [
+      "party",
+      "flirty",
+      "summer",
+      "confident"
+    ],
+    "genre": "amapiano",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1e/c9/5b/1ec95bbc-a56f-cbef-070c-ddec9f4fdd3c/196871296205.jpg/600x600bb.jpg",
+    "country": "Sudáfrica"
+  },
+  {
+    "id": "jai-ho-a-r-rahman",
+    "title": "Jai Ho",
+    "artist": "A.R. Rahman",
+    "moods": [
+      "epic",
+      "upbeat",
+      "empowering"
+    ],
+    "genre": "bollywood",
+    "energy": 8,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a8/92/ca/a892ca65-89ae-7ce3-ce08-e5aef83cfd11/00602527009230.rgb.jpg/600x600bb.jpg",
+    "country": "India"
+  },
+  {
+    "id": "54-46-was-my-number-toots-and-the-maytals",
+    "title": "54-46 Was My Number",
+    "artist": "Toots and the Maytals",
+    "moods": [
+      "upbeat",
+      "energetic",
+      "groovy"
+    ],
+    "genre": "ska",
+    "energy": 7,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/24/25/f5/2425f576-cd78-3a23-bdbb-1fe1fce9490f/00602547758644.rgb.jpg/600x600bb.jpg",
+    "country": "Jamaica"
+  },
+  {
+    "id": "legalize-it-peter-tosh",
+    "title": "Legalize It",
+    "artist": "Peter Tosh",
+    "moods": [
+      "chill",
+      "confident"
+    ],
+    "genre": "reggae",
+    "energy": 4,
+    "country": "Jamaica"
+  },
+  {
+    "id": "israelites-desmond-dekker",
+    "title": "Israelites",
+    "artist": "Desmond Dekker",
+    "moods": [
+      "upbeat",
+      "nostalgic",
+      "groovy"
+    ],
+    "genre": "ska",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/75/3d/c8/753dc86b-601f-f071-ef30-7659d5b74939/LM00187487.jpg/600x600bb.jpg",
+    "country": "Jamaica"
+  },
+  {
+    "id": "joga-bjork",
+    "title": "Jóga",
+    "artist": "Björk",
+    "moods": [
+      "epic",
+      "moody",
+      "psychedelic"
+    ],
+    "genre": "art pop",
+    "energy": 4,
+    "country": "Islandia"
+  },
+  {
+    "id": "take-on-me-a-ha",
+    "title": "Take On Me",
+    "artist": "a-ha",
+    "moods": [
+      "upbeat",
+      "nostalgic",
+      "energetic"
+    ],
+    "genre": "synth-pop",
+    "energy": 8,
+    "country": "Noruega"
+  },
+  {
+    "id": "barco-negro-mariza",
+    "title": "Barco Negro",
+    "artist": "Mariza",
+    "moods": [
+      "melancholic",
+      "sad",
+      "epic"
+    ],
+    "genre": "fado",
+    "energy": 2,
+    "country": "Portugal"
+  },
+  {
+    "id": "en-tu-perfume-grupo-firme",
+    "title": "En Tu Perfume",
+    "artist": "Grupo Firme",
+    "moods": [
+      "party",
+      "heartbreak",
+      "upbeat"
+    ],
+    "genre": "banda",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4e/93/a3/4e93a347-ec6c-d08d-2f92-c72129d0056b/723536369747_Cover.jpg/600x600bb.jpg",
+    "country": "México"
+  },
+  {
+    "id": "vallenato-silvestre-dangond",
+    "title": "Vallenato",
+    "artist": "Silvestre Dangond, Nicky Jam",
+    "moods": [
+      "party",
+      "upbeat",
+      "romantic"
+    ],
+    "genre": "vallenato",
+    "energy": 6,
+    "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/37/e6/96/37e696a1-f376-86a0-d707-f80ff1867df3/886444943390.jpg/600x600bb.jpg",
+    "country": "Colombia"
   }
 ]

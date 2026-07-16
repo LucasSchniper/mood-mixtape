@@ -565,7 +565,7 @@ async function fetchItunesTracks(term: string): Promise<ItunesTrack[]> {
 
 // Complementa el catálogo curado con resultados en vivo de la iTunes Search API
 // (misma fuente ya usada para portadas/previews, gratis y sin API key) para cubrir
-// artistas o géneros que no están en nuestra selección local de 175 canciones.
+// artistas o géneros que no están en nuestra selección local curada.
 // Buscamos en paralelo por el género detectado (si hay), por el texto libre y por
 // cada artista pedido explícitamente (así, si el catálogo local solo tiene 2 temas
 // de un artista, completamos con más resultados reales de ese artista en vez de
