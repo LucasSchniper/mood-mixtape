@@ -25,53 +25,208 @@ function containsWord(haystack: string, needle: string) {
   return new RegExp(`\\b${escapeRegExp(needle)}\\b`).test(haystack);
 }
 
+function levenshtein(a: string, b: string) {
+  if (a === b) return 0;
+  const m = a.length;
+  const n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  const dp = new Array(n + 1);
+  for (let j = 0; j <= n; j++) dp[j] = j;
+  for (let i = 1; i <= m; i++) {
+    let prev = dp[0];
+    dp[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const tmp = dp[j];
+      dp[j] = a[i - 1] === b[j - 1] ? prev : 1 + Math.min(prev, dp[j], dp[j - 1]);
+      prev = tmp;
+    }
+  }
+  return dp[n];
+}
+
+// Tolerancia a errores de tipeo proporcional al largo de la palabra, para no generar
+// falsos positivos entre palabras cortas ("sol" vs "sal").
+function fuzzyMaxDistance(len: number) {
+  if (len >= 8) return 2;
+  if (len >= 5) return 1;
+  return 0;
+}
+
+// Igual que containsWord pero tolera 1-2 letras de diferencia (typos) contra los
+// tokens sueltos del texto del usuario. Solo aplica a palabras simples: las frases
+// compuestas ("corazon roto") siguen requiriendo match exacto vía containsWord.
+function containsWordFuzzy(tokenSet: Set<string>, needle: string) {
+  if (needle.includes(" ")) return false;
+  const maxDist = fuzzyMaxDistance(needle.length);
+  if (maxDist === 0) return false;
+  for (const token of tokenSet) {
+    if (Math.abs(token.length - needle.length) > maxDist) continue;
+    if (levenshtein(token, needle) <= maxDist) return true;
+  }
+  return false;
+}
+
 // Palabras/frases en español (o inglés) del usuario -> tags canónicos usados en el catálogo (moods en inglés).
+// Cubre las 29 tags del catálogo con sinónimos, jerga y variantes de género/número.
 const MOOD_SYNONYMS: Record<string, string[]> = {
+  // nostalgic
   nostalgia: ["nostalgic"],
   nostalgico: ["nostalgic"],
   nostalgica: ["nostalgic"],
+  nostalgicos: ["nostalgic"],
+  recuerdos: ["nostalgic"],
+  recordar: ["nostalgic"],
+  "viejos tiempos": ["nostalgic"],
+  antano: ["nostalgic"],
+  infancia: ["nostalgic"],
+  adolescencia: ["nostalgic"],
+  epoca: ["nostalgic"],
+  throwback: ["nostalgic"],
+
+  // rainy day / clima / melancholic
   lluvia: ["rainy day", "melancholic"],
   lluvioso: ["rainy day"],
+  lluviosa: ["rainy day"],
+  llueve: ["rainy day"],
+  tormenta: ["rainy day", "moody"],
+  nublado: ["rainy day", "melancholic"],
+  nube: ["rainy day", "melancholic"],
+  gris: ["melancholic", "moody"],
   domingo: ["rainy day", "chill", "nostalgic"],
+  otono: ["melancholic", "rainy day"],
+
+  // sad / heartbreak
   triste: ["heartbreak", "melancholic", "sad"],
   tristeza: ["heartbreak", "melancholic", "sad"],
   llorar: ["heartbreak", "sad"],
+  lloron: ["heartbreak", "sad"],
+  lloraba: ["heartbreak", "sad"],
+  deprimido: ["sad", "melancholic"],
+  deprimida: ["sad", "melancholic"],
+  depre: ["sad", "melancholic"],
+  bajon: ["sad", "melancholic"],
+  dolor: ["heartbreak", "sad"],
   "corazon roto": ["heartbreak"],
+  desamor: ["heartbreak"],
   ruptura: ["heartbreak"],
   cortamos: ["heartbreak"],
+  "termine con": ["heartbreak"],
+  "me dejo": ["heartbreak"],
+  "me dejaron": ["heartbreak"],
+  extrano: ["heartbreak", "nostalgic"],
+  extranar: ["heartbreak", "nostalgic"],
+  "mi ex": ["heartbreak"],
+
+  // gym / energetic
   gimnasio: ["gym", "energetic"],
   entrenar: ["gym", "energetic"],
   entrenamiento: ["gym", "energetic"],
+  pesas: ["gym", "energetic"],
+  cardio: ["gym", "energetic"],
+  rutina: ["gym"],
+  ejercicio: ["gym", "energetic"],
+  correr: ["gym", "energetic"],
+  crossfit: ["gym", "energetic"],
   energia: ["energetic", "upbeat"],
+  activo: ["energetic"],
+  activa: ["energetic"],
+  motivado: ["energetic", "empowering"],
+  motivada: ["energetic", "empowering"],
+  motivacion: ["energetic", "empowering"],
+  subidon: ["energetic", "upbeat"],
+  adrenalina: ["energetic", "epic"],
+  pilas: ["energetic"],
+
+  // party / upbeat
   fiesta: ["party", "upbeat"],
   previa: ["party", "upbeat"],
   boliche: ["party"],
+  festejo: ["party", "upbeat"],
+  festejar: ["party", "upbeat"],
+  cumple: ["party", "upbeat"],
+  cumpleanos: ["party", "upbeat"],
+  joda: ["party", "upbeat"],
+  bailar: ["party", "upbeat", "groovy"],
+  baile: ["party", "upbeat", "groovy"],
+  bailable: ["party", "groovy"],
+  alegre: ["upbeat"],
+  alegria: ["upbeat"],
+  feliz: ["upbeat"],
+  felicidad: ["upbeat"],
+  animado: ["upbeat", "energetic"],
+  animada: ["upbeat", "energetic"],
+  "buena onda": ["upbeat"],
+
+  // night drive / road trip
   noche: ["night drive"],
   manejando: ["night drive", "road trip"],
   manejar: ["night drive", "road trip"],
+  conduciendo: ["night drive", "road trip"],
   auto: ["road trip", "night drive"],
+  autopista: ["road trip", "night drive"],
   ruta: ["road trip", "night drive"],
+  carretera: ["road trip", "night drive"],
   viaje: ["road trip"],
   viajando: ["road trip"],
+  vacaciones: ["road trip", "summer"],
   solo: ["melancholic", "night drive"],
   sola: ["melancholic", "night drive"],
+
+  // chill / study
   relax: ["chill"],
   relajado: ["chill"],
+  relajada: ["chill"],
   tranquilo: ["chill"],
   tranquila: ["chill"],
+  tranqui: ["chill"],
+  descansar: ["chill"],
+  lento: ["chill", "smooth"],
+  suave: ["chill", "smooth"],
   estudiar: ["study/focus", "chill"],
   concentrar: ["study/focus"],
   concentracion: ["study/focus"],
+  concentrado: ["study/focus"],
+  concentrada: ["study/focus"],
   foco: ["study/focus"],
   trabajar: ["study/focus", "chill"],
+  oficina: ["study/focus"],
+  examen: ["study/focus"],
+  parcial: ["study/focus"],
+  tesis: ["study/focus"],
+  leer: ["study/focus", "chill"],
+
+  // romantic / flirty
   romance: ["romantic"],
   amor: ["romantic"],
   enamorado: ["romantic"],
   enamorada: ["romantic"],
+  enamorarse: ["romantic"],
   cita: ["romantic"],
+  pareja: ["romantic"],
+  novio: ["romantic"],
+  novia: ["romantic"],
+  casamiento: ["romantic"],
+  boda: ["romantic"],
+  coqueteo: ["flirty", "romantic"],
+  coqueto: ["flirty"],
+  coqueta: ["flirty"],
+  seduccion: ["flirty"],
+  picante: ["flirty"],
+  levante: ["flirty"],
+
+  // summer / winter
   verano: ["summer", "upbeat"],
   calor: ["summer"],
   playa: ["summer"],
+  sol: ["summer", "upbeat"],
+  pileta: ["summer"],
+  invierno: ["winter"],
+  frio: ["winter", "melancholic"],
+  nieve: ["winter"],
+  abrigo: ["winter"],
+
+  // angsty
   bronca: ["angsty"],
   enojo: ["angsty"],
   enojado: ["angsty"],
@@ -79,6 +234,49 @@ const MOOD_SYNONYMS: Record<string, string[]> = {
   furioso: ["angsty"],
   furiosa: ["angsty"],
   bardo: ["angsty"],
+  rabia: ["angsty"],
+  odio: ["angsty"],
+  ira: ["angsty"],
+  frustracion: ["angsty"],
+  frustrado: ["angsty"],
+  frustrada: ["angsty"],
+
+  // confident / empowering
+  confianza: ["confident"],
+  seguro: ["confident"],
+  segura: ["confident"],
+  poderoso: ["confident", "empowering"],
+  poderosa: ["confident", "empowering"],
+  empoderada: ["empowering"],
+  empoderado: ["empowering"],
+  empoderamiento: ["empowering"],
+  fuerza: ["empowering"],
+  superacion: ["empowering"],
+  actitud: ["confident"],
+
+  // epic / moody / psychedelic / punk / indie / groovy / classic rock
+  epico: ["epic"],
+  epica: ["epic"],
+  heroico: ["epic"],
+  cinematico: ["epic"],
+  grandioso: ["epic"],
+  batalla: ["epic"],
+  oscuro: ["moody"],
+  oscura: ["moody"],
+  intenso: ["moody"],
+  intensa: ["moody"],
+  psicodelico: ["psychedelic"],
+  psicodelica: ["psychedelic"],
+  trip: ["psychedelic"],
+  rebelde: ["punk", "angsty"],
+  caotico: ["punk"],
+  alternativo: ["indie"],
+  under: ["indie"],
+  funky: ["groovy"],
+  sensual: ["smooth", "flirty"],
+  "rock clasico": ["classic rock"],
+  "rock de los 80": ["classic rock"],
+  "rock de los 70": ["classic rock"],
 };
 
 const TAG_LABELS_ES: Record<string, string> = {
@@ -99,6 +297,17 @@ const TAG_LABELS_ES: Record<string, string> = {
   upbeat: "buena onda",
   sad: "tristeza",
   winter: "invierno",
+  "classic rock": "rock clásico",
+  confident: "confianza",
+  empowering: "empoderamiento",
+  epic: "épico",
+  flirty: "coqueteo",
+  groovy: "groove",
+  indie: "indie",
+  moody: "oscuro",
+  psychedelic: "psicodélico",
+  punk: "punk",
+  smooth: "suave",
 };
 
 function labelFor(tag: string) {
@@ -112,22 +321,29 @@ function extractSignals(moodText: string) {
 
   const matchedTags = new Set<string>();
   for (const [phrase, tags] of Object.entries(MOOD_SYNONYMS)) {
-    if (containsWord(normalized, phrase)) {
+    if (containsWord(normalized, phrase) || containsWordFuzzy(tokenSet, phrase)) {
       tags.forEach((t) => matchedTags.add(t));
     }
   }
   // También permite que el usuario escriba el tag directamente en inglés.
   for (const tag of Object.keys(TAG_LABELS_ES)) {
-    if (containsWord(normalized, tag)) matchedTags.add(tag);
+    if (containsWord(normalized, tag) || containsWordFuzzy(tokenSet, tag)) matchedTags.add(tag);
   }
 
   let desiredEnergy: number | null = null;
-  const highEnergyHit = ["energia", "gimnasio", "entrenar", "fiesta", "previa", "boliche"].some((w) =>
-    containsWord(normalized, w)
-  );
-  const lowEnergyHit = ["triste", "llorar", "relax", "tranquilo", "tranquila", "lluvia", "domingo"].some(
-    (w) => containsWord(normalized, w)
-  );
+  const highEnergyWords = [
+    "energia", "gimnasio", "entrenar", "entrenamiento", "pesas", "cardio", "ejercicio",
+    "correr", "crossfit", "fiesta", "previa", "boliche", "festejo", "festejar", "cumple",
+    "joda", "bailar", "baile", "bailable", "motivado", "motivada", "subidon", "adrenalina",
+    "activo", "activa", "pilas", "epico", "epica", "batalla",
+  ];
+  const lowEnergyWords = [
+    "triste", "llorar", "relax", "tranquilo", "tranquila", "lluvia", "domingo", "deprimido",
+    "deprimida", "depre", "bajon", "descansar", "lento", "suave", "frio", "nublado", "gris",
+    "otono", "melancolico", "melancolica",
+  ];
+  const highEnergyHit = highEnergyWords.some((w) => containsWord(normalized, w) || containsWordFuzzy(tokenSet, w));
+  const lowEnergyHit = lowEnergyWords.some((w) => containsWord(normalized, w) || containsWordFuzzy(tokenSet, w));
   if (highEnergyHit && !lowEnergyHit) desiredEnergy = 9;
   else if (lowEnergyHit && !highEnergyHit) desiredEnergy = 3;
 
@@ -320,6 +536,80 @@ async function searchItunesCandidates(
   return merged;
 }
 
+// Interpretación del mood con un LLM gratuito (Google Gemini, capa free de
+// Google AI Studio: https://aistudio.google.com/apikey — sin instalar nada,
+// solo una API key en GEMINI_API_KEY). Complementa —no reemplaza— el matching
+// por reglas de arriba: entiende moods que el diccionario de sinónimos no
+// cubre (jerga nueva, frases indirectas, inglés mezclado con español, typos
+// raros). Si no hay API key configurada o la llamada falla/tarda de más,
+// devolvemos null y seguimos solo con el resultado de extractSignals.
+const GEMINI_MODEL = "gemini-2.5-flash";
+
+type LlmMoodSignals = { tags: string[]; energy: number | null };
+
+async function interpretMoodWithGemini(
+  mood: string,
+  knownTags: string[]
+): Promise<LlmMoodSignals | null> {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) return null;
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 6000);
+  try {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`;
+    const prompt = [
+      "Interpretá el mood/pedido de un usuario para armar una playlist.",
+      `Tags válidos (usá SOLO estos, en inglés, tal cual están escritos): ${knownTags.join(", ")}.`,
+      "Devolvé los tags que mejor describan el mood (0 a 5 tags, los más relevantes primero).",
+      "Devolvé también un nivel de energía de 1 (muy calmo) a 10 (muy energético) si se puede inferir, o null si no hay pistas de energía.",
+      `Mood del usuario: "${mood}"`,
+    ].join("\n");
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      signal: controller.signal,
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: {
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: "object",
+            properties: {
+              tags: { type: "array", items: { type: "string" } },
+              energy: { type: "integer", nullable: true },
+            },
+            required: ["tags", "energy"],
+          },
+        },
+      }),
+    });
+    if (!res.ok) return null;
+
+    const data = await res.json();
+    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (typeof text !== "string") return null;
+
+    const parsed = JSON.parse(text);
+    const knownTagSet = new Set(knownTags);
+    const tags = Array.isArray(parsed?.tags)
+      ? parsed.tags.filter((t: unknown): t is string => typeof t === "string" && knownTagSet.has(t))
+      : [];
+    const energy =
+      typeof parsed?.energy === "number" && Number.isFinite(parsed.energy)
+        ? Math.min(10, Math.max(1, Math.round(parsed.energy)))
+        : null;
+
+    return { tags, energy };
+  } catch {
+    // Timeout, red caída, cuota agotada, JSON inválido, etc: seguimos solo con las reglas.
+    return null;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 function shuffle<T>(items: T[]) {
   const result = [...items];
   for (let i = result.length - 1; i > 0; i--) {
@@ -368,11 +658,10 @@ export async function POST(req: NextRequest) {
   const localKeys = new Set(
     catalog.map((s) => `${normalize(s.title)}::${normalize(s.artist)}`)
   );
-  const itunesResults = await searchItunesCandidates(
-    mood,
-    catalog,
-    Array.from(requestedArtists.values())
-  );
+  const [itunesResults, llmSignals] = await Promise.all([
+    searchItunesCandidates(mood, catalog, Array.from(requestedArtists.values())),
+    interpretMoodWithGemini(mood, Object.keys(TAG_LABELS_ES)),
+  ]);
   const seenExternalKeys = new Set<string>();
   const externalSongs = itunesResults.filter((s) => {
     const key = `${normalize(s.title)}::${normalize(s.artist)}`;
@@ -382,7 +671,11 @@ export async function POST(req: NextRequest) {
   });
   const allSongs = [...catalog, ...externalSongs];
 
-  const { tokenSet, matchedTags, desiredEnergy } = extractSignals(mood);
+  const { tokenSet, matchedTags, desiredEnergy: regexEnergy } = extractSignals(mood);
+  // El LLM suma tags/energía cuando las reglas no alcanzan (jerga, frases indirectas,
+  // typos raros); las reglas mandan si ya encontraron una energía explícita.
+  llmSignals?.tags.forEach((t) => matchedTags.add(t));
+  const desiredEnergy = regexEnergy ?? llmSignals?.energy ?? null;
   const normalizedMood = withGenreAliases(normalize(mood));
 
   const ARTIST_MATCH_BONUS = 50;

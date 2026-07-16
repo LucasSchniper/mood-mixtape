@@ -153,6 +153,8 @@ export function MoodMixtape() {
   const [result, setResult] = useState<Result | null>(null);
   const [examples, setExamples] = useState(DEFAULT_EXAMPLES);
   const [songCount, setSongCount] = useState(DEFAULT_SONG_COUNT);
+  const [youtubeLoading, setYoutubeLoading] = useState(false);
+  const [youtubeError, setYoutubeError] = useState<string | null>(null);
   const { play: playPreview, stop: stopPreview, playingId } = usePreviewPlayer();
 
   useEffect(() => {
@@ -185,6 +187,44 @@ export function MoodMixtape() {
       setError("No se pudo conectar con el servidor.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function createYoutubeQueue() {
+    if (!result) return;
+    const songs = result.picks.map((p) => p.song).filter((s): s is Song => Boolean(s));
+    if (songs.length === 0) return;
+
+    setYoutubeError(null);
+    setYoutubeLoading(true);
+    try {
+      const res = await fetch("/api/youtube-queue", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          songs: songs.map((s) => ({ title: s.title, artist: s.artist })),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setYoutubeError(data.error ?? "No se pudo armar la fila de YouTube.");
+        return;
+      }
+      if (data.videoIds.length === 0) {
+        setYoutubeError("No encontramos ninguna de estas canciones en YouTube.");
+        return;
+      }
+      // watch_videos arma una fila de reproducción temporal con todos los videos en orden,
+      // sin necesitar login ni guardar nada en la cuenta de YouTube del usuario.
+      window.open(
+        `https://www.youtube.com/watch_videos?video_ids=${data.videoIds.join(",")}`,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    } catch {
+      setYoutubeError("No se pudo conectar con YouTube.");
+    } finally {
+      setYoutubeLoading(false);
     }
   }
 
@@ -262,13 +302,28 @@ export function MoodMixtape() {
 
       {result && (
         <div className="flex flex-col gap-6">
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-gradient">
-              {result.playlistName}
-            </h2>
-            {result.intro && (
-              <p className="text-muted-foreground mt-1">{result.intro}</p>
-            )}
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-gradient">
+                {result.playlistName}
+              </h2>
+              {result.intro && (
+                <p className="text-muted-foreground mt-1">{result.intro}</p>
+              )}
+            </div>
+            <div className="flex flex-col items-end gap-1">
+              <Button
+                onClick={createYoutubeQueue}
+                disabled={youtubeLoading}
+                variant="secondary"
+                className="shrink-0"
+              >
+                {youtubeLoading ? "Buscando en YouTube..." : "Crear fila en YouTube"}
+              </Button>
+              {youtubeError && (
+                <span className="text-xs text-destructive text-right max-w-56">{youtubeError}</span>
+              )}
+            </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
