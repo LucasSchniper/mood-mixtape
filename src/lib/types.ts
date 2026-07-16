@@ -7,6 +7,8 @@ export type Song = {
   moods: string[];
   genre: string;
   energy: number;
+  country?: string;
+  album?: string;
 };
 
 export type PlaylistPick = {

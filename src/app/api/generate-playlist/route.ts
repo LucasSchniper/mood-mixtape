@@ -409,10 +409,79 @@ function buildReason(matchedOn: Set<string>, genre: string) {
   const artistMatch = Array.from(matchedOn).find((m) => m.startsWith("artist:"));
   if (artistMatch) return `Es de ${artistMatch.slice("artist:".length)}.`;
 
-  const labels = Array.from(matchedOn).slice(0, 2).map(labelFor);
+  const labels = Array.from(matchedOn)
+    .slice(0, 2)
+    .map((m) => (m.startsWith("country:") ? m.slice("country:".length) : labelFor(m)));
   return labels.length > 0
     ? `Coincide en ${labels.join(" y ")}.`
     : `Buena opción de ${genre} para variar.`;
+}
+
+// Formas de nombrar un país (o su gentilicio) en el mood del usuario -> nombre canónico
+// tal cual se guarda en `song.country`. Las claves van sin tildes porque se comparan
+// contra el texto ya normalizado (ver `normalize`).
+const COUNTRY_ALIASES: Record<string, string> = {
+  argentina: "Argentina",
+  argentino: "Argentina",
+  argentinos: "Argentina",
+  argentinas: "Argentina",
+  "estados unidos": "Estados Unidos",
+  eeuu: "Estados Unidos",
+  usa: "Estados Unidos",
+  estadounidense: "Estados Unidos",
+  americano: "Estados Unidos",
+  americana: "Estados Unidos",
+  "reino unido": "Reino Unido",
+  inglaterra: "Reino Unido",
+  ingles: "Reino Unido",
+  inglesa: "Reino Unido",
+  britanico: "Reino Unido",
+  britanica: "Reino Unido",
+  uk: "Reino Unido",
+  "puerto rico": "Puerto Rico",
+  puertorriqueno: "Puerto Rico",
+  puertorriquena: "Puerto Rico",
+  colombia: "Colombia",
+  colombiano: "Colombia",
+  colombiana: "Colombia",
+  espana: "España",
+  español: "España",
+  española: "España",
+  spain: "España",
+  suecia: "Suecia",
+  sueco: "Suecia",
+  sueca: "Suecia",
+  "corea del sur": "Corea del Sur",
+  corea: "Corea del Sur",
+  coreano: "Corea del Sur",
+  coreana: "Corea del Sur",
+  jamaica: "Jamaica",
+  jamaiquino: "Jamaica",
+  jamaiquina: "Jamaica",
+  venezuela: "Venezuela",
+  venezolano: "Venezuela",
+  venezolana: "Venezuela",
+  francia: "Francia",
+  frances: "Francia",
+  francesa: "Francia",
+  canada: "Canadá",
+  canadiense: "Canadá",
+  irlanda: "Irlanda",
+  irlandes: "Irlanda",
+  irlandesa: "Irlanda",
+  australia: "Australia",
+  australiano: "Australia",
+  australiana: "Australia",
+};
+
+// Busca en el mood del usuario una mención a alguno de los países presentes en el
+// catálogo (nombre o gentilicio) y devuelve el nombre canónico, o null si no hay ninguna.
+function extractRequestedCountry(moodText: string): string | null {
+  const normalized = normalize(moodText);
+  for (const [alias, canonical] of Object.entries(COUNTRY_ALIASES)) {
+    if (containsWord(normalized, alias)) return canonical;
+  }
+  return null;
 }
 
 // Palabras de relleno del prompt ("quiero", "una playlist de", ...) que le restan precisión
@@ -536,6 +605,78 @@ async function searchItunesCandidates(
   return merged;
 }
 
+// Reconoce pedidos explícitos de un álbum completo ("el álbum Persiana Americana de
+// Soda Stereo", "disco Cuatro Caminos"). Devuelve el título y, si se pudo separar con
+// " de ", el artista. Se busca sobre el texto original (sin normalizar) para no perder
+// mayúsculas/tildes que ayudan a la búsqueda en iTunes.
+function extractAlbumRequest(moodText: string): { title: string; artist: string | null } | null {
+  const match = moodText.match(/(?:^|\s)(?:el\s+|un\s+)?(?:[áa]lbum|disco)\s+(.+)/i);
+  if (!match) return null;
+  const rest = match[1].trim();
+  if (!rest) return null;
+
+  const deMatch = rest.match(/^(.+?)\s+de\s+(.+)$/i);
+  if (deMatch && deMatch[1].trim()) {
+    return { title: deMatch[1].trim(), artist: deMatch[2].trim() };
+  }
+  return { title: rest, artist: null };
+}
+
+type ItunesAlbum = { collectionId?: number; collectionName?: string };
+type ItunesAlbumTrack = {
+  wrapperType?: string;
+  trackId?: number;
+  trackName?: string;
+  artistName?: string;
+  collectionName?: string;
+  primaryGenreName?: string;
+  artworkUrl100?: string;
+  trackNumber?: number;
+};
+
+// Busca el álbum pedido en iTunes y trae todas sus canciones (en orden de tracklist),
+// gratis y sin API key, igual que el resto de las búsquedas de la app.
+async function fetchAlbumTracks(request: { title: string; artist: string | null }): Promise<Song[]> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 6000);
+  try {
+    const term = request.artist ? `${request.title} ${request.artist}` : request.title;
+    const searchUrl = `https://itunes.apple.com/search?term=${encodeURIComponent(
+      term
+    )}&media=music&entity=album&limit=5&country=AR`;
+    const searchRes = await fetch(searchUrl, { signal: controller.signal });
+    if (!searchRes.ok) return [];
+    const searchData = await searchRes.json();
+    const albums: ItunesAlbum[] = Array.isArray(searchData?.results) ? searchData.results : [];
+    const collectionId = albums[0]?.collectionId;
+    if (!collectionId) return [];
+
+    const lookupUrl = `https://itunes.apple.com/lookup?id=${collectionId}&entity=song&country=AR`;
+    const lookupRes = await fetch(lookupUrl, { signal: controller.signal });
+    if (!lookupRes.ok) return [];
+    const lookupData = await lookupRes.json();
+    const items: ItunesAlbumTrack[] = Array.isArray(lookupData?.results) ? lookupData.results : [];
+
+    return items
+      .filter((t) => t.wrapperType === "track" && t.trackId && t.trackName && t.artistName)
+      .sort((a, b) => (a.trackNumber ?? 0) - (b.trackNumber ?? 0))
+      .map((t) => ({
+        id: `itunes-${t.trackId}`,
+        title: t.trackName!,
+        artist: t.artistName!,
+        moods: [],
+        genre: (t.primaryGenreName ?? "").toLowerCase(),
+        energy: 5,
+        coverUrl: t.artworkUrl100?.replace("100x100bb", "600x600bb"),
+        album: t.collectionName,
+      }));
+  } catch {
+    return [];
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 // Interpretación del mood con un LLM gratuito (Google Gemini, capa free de
 // Google AI Studio: https://aistudio.google.com/apikey — sin instalar nada,
 // solo una API key en GEMINI_API_KEY). Complementa —no reemplaza— el matching
@@ -643,6 +784,29 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Mood demasiado largo (máx 300 caracteres)." }, { status: 400 });
   }
 
+  // Pedido explícito de un álbum completo ("el álbum X de Y"): es una intención muy
+  // puntual, así que cortamos acá con esas canciones en vez de mezclarlas con el
+  // resto del matching por mood/tags.
+  const albumRequest = extractAlbumRequest(mood);
+  if (albumRequest) {
+    const albumTracks = await fetchAlbumTracks(albumRequest);
+    if (albumTracks.length > 0) {
+      const picks = albumTracks.slice(0, count).map((song) => ({
+        id: song.id,
+        reason: `Track del álbum${song.album ? ` "${song.album}"` : ""}.`,
+        song,
+      }));
+      const albumName = albumTracks[0].album ?? albumRequest.title;
+      return NextResponse.json({
+        playlistName: albumName,
+        intro: `El álbum completo${albumRequest.artist ? ` de ${albumRequest.artist}` : ""}, en orden.`,
+        picks,
+      });
+    }
+    // Si no encontramos el álbum en iTunes, seguimos con el matching normal por si
+    // el texto matchea algo por mood/artista igual (ej. "disco" también es un mood válido).
+  }
+
   const catalog = songs as Song[];
 
   // Solo buscamos artistas pedidos en el catálogo curado. Si mirásemos también los
@@ -677,9 +841,11 @@ export async function POST(req: NextRequest) {
   llmSignals?.tags.forEach((t) => matchedTags.add(t));
   const desiredEnergy = regexEnergy ?? llmSignals?.energy ?? null;
   const normalizedMood = withGenreAliases(normalize(mood));
+  const requestedCountry = extractRequestedCountry(mood);
 
   const ARTIST_MATCH_BONUS = 50;
   const GENRE_MATCH_WEIGHT = 3;
+  const COUNTRY_MATCH_BONUS = 6;
 
   const scored = allSongs.map((song) => {
     let score = 0;
@@ -718,6 +884,11 @@ export async function POST(req: NextRequest) {
 
     if (desiredEnergy !== null) {
       score += Math.max(0, 2 - Math.abs(song.energy - desiredEnergy) * 0.3);
+    }
+
+    if (requestedCountry && song.country === requestedCountry) {
+      score += COUNTRY_MATCH_BONUS;
+      matchedOn.add(`country:${song.country}`);
     }
 
     return { song, score, matchedOn };
@@ -807,6 +978,7 @@ export async function POST(req: NextRequest) {
     .sort((a, b) => normalize(b).split(/\s+/).length - normalize(a).split(/\s+/).length);
 
   const topLabels = [...Array.from(matchedTags).map(labelFor), ...matchedGenres].slice(0, 2);
+  if (requestedCountry) topLabels.push(requestedCountry);
 
   let playlistName: string;
   let intro: string;
